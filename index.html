@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>House Framing Atlas · Done Right Roofing</title><style>:root{color-scheme:light;font-family:"Segoe UI",Arial,sans-serif;color:#253736;background:#f8f9f6;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit;color:inherit}
+button,select{cursor:pointer}button{touch-action:manipulation}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #167f78;outline-offset:3px}
+button{border:0;background:none}svg.ico{width:19px;height:19px;flex:none;vertical-align:middle;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;fill:none}
+[hidden]{display:none!important}
+.mast{border-bottom:1px solid #d5ddda;background:#fff}.mast-inner,.page-inner{max-width:1560px;margin:auto;padding-inline:clamp(18px,4vw,72px)}
+.mast-inner{height:67px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand,.top-actions,.minor,.index-button,.scene-caption,.part-group,.isolate,.gesture,.tool-group,.legend,.browse,.intro,.coverage,.model-bar,.controls,.dialog-head,.search-fields,.search-box{display:flex;align-items:center}
+.brand{gap:11px;font-weight:680;letter-spacing:-.045em;font-size:19px;color:#1d3632}.brand-icon{display:grid;place-items:center;width:37px;height:37px;border-radius:9px;background:#22443e;color:#f9ead5}.brand-icon svg.ico{width:29px;height:29px;stroke-width:1.5}
+.top-actions{gap:14px}.minor,.index-button{gap:8px;font-size:14px;font-weight:600}.minor{padding:10px 6px}.index-button{border:1px solid #b9c8c2;border-radius:8px;padding:9px 14px;background:white}.index-button:hover,.minor:hover{color:#04756b}
+.intro{justify-content:space-between;gap:20px;padding:clamp(24px,3.3vw,50px) 0 24px}
+h1,h2,h3,p,dl,dd{margin:0}.intro h1{font-family:"Segoe UI Variable Display","Segoe UI",Arial,sans-serif;font-size:clamp(34px,4.25vw,64px);line-height:1.05;letter-spacing:-.061em;font-weight:650;color:#1d3633}
+.intro p{margin-top:11px;color:#536461;font-size:clamp(14px,1.15vw,17px);line-height:1.45}.coverage,.part-group,.legend,.results-count,.browse,.model-options,.scene-caption,.explanation dt{font-family:"Consolas","Courier New",monospace}
+.coverage{gap:8px;white-space:nowrap;color:#526763;font-size:12px;align-self:flex-end;margin-bottom:4px}.coverage:before{content:"";width:17px;border-top:2px solid #819a8d}
+.systems{border-block:1px solid #cbd4ce;display:flex;align-items:stretch;flex-wrap:wrap;gap:1px;padding:7px 0;margin-bottom:20px}
+.systems button{padding:9px clamp(9px,1.11vw,20px);border-radius:6px;font-weight:550;font-size:14px;white-space:nowrap}.systems button:hover,.icon-button:hover,.result:hover{background:#e6ece7}
+.systems button[aria-pressed=true]{background:#264a43;color:white}.small-systems{display:none}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) clamp(286px,25vw,360px);gap:18px;align-items:stretch}
+.model-panel,.inspector{border:1px solid #cbd6cf;border-radius:13px;overflow:hidden;min-width:0;background:#fff}
+.model-panel{display:flex;flex-direction:column;background:#e9efea;position:relative}
+.model-bar{min-height:50px;justify-content:space-between;gap:10px;padding:8px 17px 0;color:#405850;flex-wrap:wrap}.scene-caption{gap:8px;font-size:13px;font-weight:600}.scene-caption svg.ico{width:17px;height:17px}.model-options{font-size:11px;display:flex;align-items:center;gap:7px}.model-options select{font-family:"Segoe UI",Arial,sans-serif;font-size:12px;max-width:210px;background:#f9fbf8;border:1px solid #b8c8bd;border-radius:5px;padding:6px}
+.stage{position:relative;flex:1 1 auto;min-height:clamp(360px,31vw,525px);width:100%;isolation:isolate;overflow:hidden;background:#e9efea}
+.model-canvas,.overlay{display:block;width:100%;height:100%;position:absolute;inset:0}.model-canvas{touch-action:none;cursor:grab;-webkit-tap-highlight-color:transparent;user-select:none}.model-canvas:active{cursor:grabbing}.overlay{pointer-events:none}
+.controls{background:#f6f8f4;border-top:1px solid #d3ddd4;justify-content:space-between;padding:6px 11px 6px 16px;gap:6px;min-height:49px}.gesture{color:#4d6259;font-size:12px;gap:7px}.gesture svg.ico{width:17px}.control-divider{margin:0 4px;color:#7a8980}
+.tool-group{gap:2px}.icon-button{width:32px;height:32px;display:inline-grid;place-items:center;border-radius:5px;flex:none}.icon-button svg.ico{width:17px;height:17px}
+.rule{height:15px;border-left:1px solid #bccac0;margin:0 3px}
+.inspector{display:flex;flex-direction:column}.inspector-body{padding:24px 24px 0}
+.part-group{gap:7px;text-transform:uppercase;letter-spacing:.1em;color:#965021;font-size:11px;font-weight:650}.group-marker,.legend-dot{width:8px;height:8px;background:#ed7a3c;border-radius:2px;display:inline-block;flex:none}
+.inspector h2{font-size:clamp(27px,2.3vw,36px);font-weight:620;line-height:1.1;letter-spacing:-.045em;margin:9px 0 21px;color:#213a34;overflow-wrap:anywhere}
+.explanation{border-top:1px solid #dce2db;padding-top:16px}.explanation dt{color:#536b60;text-transform:uppercase;letter-spacing:.11em;font-weight:650;font-size:11px;margin-bottom:4px}
+.explanation dd{font-size:15px;line-height:1.47;color:#34453f;margin-bottom:16px}.inspector-actions{margin-top:auto;padding:0 24px}.isolate{width:100%;border:1px solid #bfcfc4;gap:8px;background:#f4f7f2;border-radius:7px;justify-content:center;padding:9px;font-size:14px;font-weight:600;color:#315647}.isolate:hover,.isolate[aria-pressed=true]{background:#dbebe0}.isolate svg.ico{width:17px}
+.browse{border-top:1px solid #dce2db;margin-top:15px;padding:7px 0;justify-content:space-between;font-size:11px;color:#58675d}
+.legend{gap:8px;font-size:11px;color:#56685f;padding:12px 1px 25px}.legend-dot{width:7px;height:7px}.legend-spacer{width:15px;border-top:1px solid #acb9b1}
+.atlas-dialog{width:min(680px,calc(100% - 26px));max-height:min(78dvh,720px);overflow:auto;border:1px solid #b6c9bb;border-radius:14px;padding:22px;color:#263a31;background:#fbfcf9;box-shadow:0 20px 60px #152a2630}
+.atlas-dialog::backdrop{background:#18362b60}.dialog-head{justify-content:space-between;align-items:flex-start;gap:10px}.dialog-head h2{font-size:28px;font-weight:630;letter-spacing:-.046em}.dialog-head p,.scope-note{font-size:14px;line-height:1.5;color:#59685f;margin-top:5px}.search-fields{gap:8px;margin:17px 0 10px}.search-box{gap:6px;flex:1;min-width:0}.search-box svg{color:#60766a}
+.form-control,.search-fields select{width:100%;min-width:0;padding:9px;border:1px solid #b7c8bc;border-radius:5px;background:white;font-size:14px}.search-fields select{width:auto;max-width:44%}.results-count{font-size:12px;color:#53675c}
+.results h3,.guide-dialog h3{font-weight:600;font-size:14px;color:#385448;margin:17px 0 7px}.result-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px}.result{width:100%;text-align:left;padding:9px 5px;border-bottom:1px solid #d7e0d7;font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}.result:after{content:'›';color:#597465}.empty{padding:18px 0;font-size:14px}
+.guide-list{padding-left:22px}.guide-list li,.sources a{font-size:14px;line-height:1.55}.guide-list li{padding:0 0 9px 3px}.scope-note{border-top:1px solid #d4dfd4;padding-top:12px}.sources{display:grid;gap:5px}.sources a{color:#306758;text-underline-offset:3px}
+@media(min-width:1600px){.stage{min-height:510px}}
+@media(max-width:1080px){.systems button{padding:9px 10px;font-size:13px}.workspace{gap:12px;grid-template-columns:minmax(0,1fr) 280px}.inspector-body{padding:20px 17px 0}.inspector-actions{padding:0 17px}.coverage{display:none}.controls .gesture .control-divider{margin:0}.controls{padding-inline:8px}.gesture{font-size:11px}.mast-inner,.page-inner{padding-inline:22px}.stage{min-height:340px}}
+@media(max-width:820px){.workspace{grid-template-columns:1fr}.stage{min-height:0;height:clamp(280px,53vw,440px);flex:none}.inspector{display:grid;grid-template-columns:minmax(0,1fr) 175px;align-items:center}.inspector-body{padding:18px}.inspector-actions{padding:15px 18px 15px 0;margin:0}.explanation dd:last-child{margin-bottom:0}.intro{padding-top:22px}.systems{margin-bottom:12px}}
+@media(max-width:600px){.mast-inner,.page-inner{padding-inline:14px}.mast-inner{height:55px;gap:5px}.brand{font-size:16px;gap:7px}.brand-icon{width:29px;height:29px;border-radius:6px}.brand-icon svg.ico{width:24px;height:24px}.top-actions{gap:3px}.minor,.index-button{font-size:13px;min-height:42px}.minor{padding:6px}.minor>span:last-child{display:none}.index-button{padding:6px 9px;min-height:36px}.top-actions svg.ico{width:16px}.intro{padding:17px 0 12px}.intro h1{font-size:34px}.intro p{margin-top:6px;font-size:14px}.systems{display:none}.small-systems{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;margin:0 0 10px}.small-systems select{flex:1;min-width:0;border:1px solid #b6c7bc;border-radius:6px;background:#fff;padding:6px 8px;font-size:16px;min-height:42px}.workspace{gap:10px}.model-panel,.inspector{border-radius:9px}.model-bar{padding:5px 10px 0;min-height:32px}.scene-caption{font-size:11px}.scene-caption svg.ico{width:15px}.model-options{font-size:0;gap:0}.model-options select{font-size:13px;max-width:175px;min-height:38px}.stage{height:clamp(230px,66vw,330px)}.controls{min-height:44px;padding:0 4px;justify-content:space-between}.gesture>span:last-child{font-size:0}.gesture>span:last-child:after{content:'Drag to turn';font-size:11px}.gesture{gap:4px;padding-left:4px}.tool-group{gap:0}.icon-button{height:42px;width:40px}.rule{margin:0 1px}.inspector{display:flex}.inspector-body{padding:16px 16px 0}.inspector h2{font-size:27px;margin:6px 0 12px}.explanation{padding-top:10px}.explanation dt{margin-bottom:2px}.explanation dd{margin-bottom:11px;font-size:14px}.inspector-actions{padding:13px 16px 0}.isolate{min-height:44px}.browse{margin-top:10px;padding:0}.legend{padding-bottom:14px}.atlas-dialog{padding:16px;max-height:83dvh}.search-fields{flex-wrap:wrap}.search-box{flex-basis:100%}.search-fields select{width:100%;max-width:none}.search-fields input,.search-fields select{font-size:16px}.result-group{grid-template-columns:1fr}.result{min-height:44px}.model-panel:has(.model-options:not([hidden])) .scene-caption{max-width:40%}}
+@media(pointer:coarse){.icon-button{min-width:44px;min-height:44px}.result,.isolate,.systems button{min-height:44px}}
+@media(max-width:355px){.gesture svg.ico{display:none}.controls .gesture{padding-left:2px}.brand{font-size:14px}.tool-group .rule{display:none}.top-actions .minor{padding:3px}.intro h1{font-size:31px}}
+</style><meta name="description" content="Rotate a 3D house and tap any piece to learn its name, placement, and purpose. Explore 161 terms with Done Right Roofing.">
+<meta property="og:title" content="House Framing Atlas · Done Right Roofing">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Explore 161 framing, roofing, and home-building terms in a clickable 3D house.">
+<meta property="og:image" content="https://mr-doneright.github.io/house-framing-atlas/atlas-preview.jpg">
+<meta property="og:image:alt" content="A cutaway wood-frame house with one common rafter highlighted.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./atlas-icon.svg" type="image/svg+xml">
+</head><body><div id="framing-atlas">
+  <header class="mast">
+    <div class="mast-inner">
+      <div class="brand"><span class="brand-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 11 11 3l10 8 M5 10v10h13V10 M8 18v-6l3-3 4 4v5 M3 16l7-6"/></svg></span>Done Right Roofing</div>
+      <div class="top-actions">
+        <button type="button" class="minor btn" data-action="guide"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M9.5 9a2.5 2.5 0 1 1 4.4 1.6c-1.2 1.1-2 1.4-2 3 M12 16.8h.01"/></svg><span>Guide</span></button>
+        <button type="button" class="index-button btn" data-action="index"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z M12 6v14"/></svg>Term index</button>
+      </div>
+    </div>
+  </header>
+  <main class="page-inner">
+    <div class="intro">
+      <div><h1>House Framing Atlas</h1><p>Rotate the cutaway and select a piece to learn how the house fits together.</p></div>
+      <div class="coverage" data-role="coverage"></div>
+    </div>
+    <nav class="systems" data-role="systems" aria-label="Building systems"></nav>
+    <label class="small-systems form-label">Building system<select class="form-select" data-role="system-select" aria-label="Building system"></select></label>
+    <div class="workspace">
+      <section class="model-panel" aria-label="Interactive house model">
+        <div class="model-bar">
+          <div class="scene-caption"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 21 7.5v9L12 22l-9-5.5v-9z M3 7.5 12 13l9-5.5 M12 13v9"/></svg><span data-role="model-title">House cutaway</span></div>
+          <label class="model-options form-label" data-role="model-options">Detail view <select class="form-select" data-role="scene" aria-label="Detail view"></select></label>
+        </div>
+        <div class="stage" data-role="stage">
+          <canvas class="model-canvas" data-role="model" role="img" aria-label="Rotatable 3D house cutaway. Select a visible piece, or choose a term in the index."></canvas>
+          <canvas class="overlay" data-role="overlay" aria-hidden="true"></canvas>
+        </div>
+        <div class="controls">
+          <div class="gesture"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 10.3C20 10.7 21 11.4 21 12.4c0 2-4 3.6-9 3.6s-9-1.6-9-3.6c0-1.2 1.5-2.3 4-2.9 M6 7l1 2.5L5 11 M9 7a4 4 0 1 1 6 5 M12 19v2"/></svg><span>Drag to rotate <span class="control-divider">/</span> Click to inspect</span></div>
+          <div class="tool-group" aria-label="Camera controls">
+            <button type="button" class="btn icon-button" data-action="left" aria-label="Rotate left" title="Rotate left"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 4 9l4 4 M4 9h10a5 5 0 0 1 0 10h-3"/></svg></button>
+            <button type="button" class="btn icon-button" data-action="right" aria-label="Rotate right" title="Rotate right"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 5 4 4-4 4 M20 9H10a5 5 0 0 0 0 10h3"/></svg></button>
+            <span class="rule"></span>
+            <button type="button" class="btn icon-button" data-action="minus" aria-label="Zoom out" title="Zoom out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+            <button type="button" class="btn icon-button" data-action="plus" aria-label="Zoom in" title="Zoom in"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M12 5v14"/></svg></button>
+            <button type="button" class="btn icon-button" data-action="fit" aria-label="Reset view" title="Reset view"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5 M15 4h5v5 M20 15v5h-5 M9 20H4v-5"/></svg></button>
+          </div>
+        </div>
+      </section>
+      <aside class="inspector" aria-label="Selected part">
+        <div class="inspector-body" aria-live="polite" aria-atomic="true">
+          <div class="part-group"><span class="group-marker"></span><span data-role="part-group"></span></div>
+          <h2 data-role="name"></h2>
+          <dl class="explanation">
+            <dt>Purpose</dt><dd data-role="purpose"></dd>
+            <dt>Placement</dt><dd data-role="placement"></dd>
+            <dt>Why it matters</dt><dd data-role="importance"></dd>
+          </dl>
+        </div>
+        <div class="inspector-actions">
+          <button type="button" class="btn isolate" data-action="isolate" aria-pressed="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5 M16 3h5v5 M21 16v5h-5 M8 21H3v-5 M12 8l4 2v5l-4 2-4-2v-5z"/></svg><span data-role="isolate-text">Isolate this part</span></button>
+          <div class="browse"><button type="button" class="btn icon-button" data-action="prev" aria-label="Previous term" title="Previous term"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg></button><div data-role="position"></div><button type="button" class="btn icon-button" data-action="next" aria-label="Next term" title="Next term"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button></div>
+        </div>
+      </aside>
+    </div>
+    <div class="legend"><span class="legend-dot"></span>Selected piece<span class="legend-spacer"></span><span data-role="scene-count"></span></div>
+  </main>
+  <dialog class="atlas-dialog" data-role="library" aria-labelledby="atlas-index-title">
+    <div class="dialog-head"><div><h2 id="atlas-index-title">Term index</h2><p>Choose a term to locate it in the model.</p></div><button type="button" class="btn icon-button" data-action="close-index" aria-label="Close term index"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12 M18 6 6 18"/></svg></button></div>
+    <div class="search-fields"><label class="search-box form-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 17l4 4 M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z"/></svg><input class="form-control" type="search" data-role="search" aria-label="Search terms" placeholder="Search terms or trade names" autocomplete="off"></label>
+    <select class="form-select" data-role="index-group" aria-label="Filter index by building system"></select></div>
+    <div class="results-count" data-role="result-count" aria-live="polite"></div>
+    <div class="results" data-role="results"></div>
+  </dialog>
+  <dialog class="atlas-dialog guide-dialog" data-role="guide" aria-labelledby="atlas-guide-title">
+    <div class="dialog-head"><h2 id="atlas-guide-title">Using the atlas</h2><button type="button" class="btn icon-button" data-action="close-guide" aria-label="Close guide"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12 M18 6 6 18"/></svg></button></div>
+    <ol class="guide-list">
+      <li><strong>Choose a building system.</strong> Start with the whole house, or select a system to uncover its parts. Use Detail view to switch between assemblies.</li>
+      <li><strong>Turn the model.</strong> Drag with a mouse or one finger. Scroll or pinch to zoom. The arrow and zoom buttons also work with a keyboard.</li>
+      <li><strong>Select a piece.</strong> Click or tap its surface to read about it. The term index finds small or hidden pieces by name.</li>
+      <li><strong>Look more closely.</strong> Isolate this part shows the selected term on its own. Show assembly puts it back in context.</li>
+    </ol>
+    <p class="scope-note">The atlas illustrates common North American wood-frame construction. Cutaways omit sections to expose connections. Dimensions and spacing are illustrative.</p>
+    <h3>Field references</h3>
+    <div class="sources">
+      <a href="https://awc.org/resources/wcd-1-details-for-conventional-wood-frame-construction/" target="_blank" rel="noopener">American Wood Council · Conventional wood framing</a>
+      <a href="https://www.owenscorning.com/en-us/roofing/components/" target="_blank" rel="noopener">Owens Corning · Roof components</a>
+      <a href="https://www.sbcacomponents.com/terminology" target="_blank" rel="noopener">Structural Building Components Association · Truss terminology</a>
+      <a href="https://basc.pnnl.gov/resource-guides/windows-and-doors-are-fully-flashed" target="_blank" rel="noopener">Building America Solution Center · Window and door flashing</a>
+      <a href="https://basc.pnnl.gov/resource-guides/air-sealing-sill-plates" target="_blank" rel="noopener">Building America Solution Center · Sill plates</a>
+    </div>
+  </dialog>
+</div>
+<script>
+(()=>{
+"use strict";
+const terms = new Map();
+const pieces = [];
+let sceneName = 'house';
+const scene = name => { sceneName = name; };
+const groups = {
+  all:'Whole house', foundation:'Foundation', floor:'Floor framing', walls:'Wall framing',
+  roof:'Roof framing', roofing:'Roofing', exterior:'Exterior', interior:'Interior & stairs', services:'Building services'
+};
+const sceneNames = {
+  house:'House cutaway', junction:'Hip & valley junction', truss:'Engineered roof truss',
+  flashing:'Roof flashing details', enclosure:'Window & door cutaway', stairs:'Stair assembly',
+  services:'Building services cutaway'
+};
+const palette = {
+  wood:['#dec090',1],darkwood:['#b5895b',1],endgrain:['#caa67c',1],
+  ply:['#c9a676',2],osb:['#b99866',2],concrete:['#aeb4ad',3],
+  steel:['#7d8b91',4],metal:['#9ba9ad',4],zinc:['#b1bab9',4],copper:['#b97959',4],
+  membrane:['#687a80',5],ice:['#556a70',5],shingle:['#47575a',6],cap:['#465859',6],
+  insulation:['#d8b58d',3],white:['#e4e4d7',0],brick:['#ad7361',3],
+  pipe:['#d8dcce',0],rubber:['#494d4b',5],glass:['#83b7be',4],water:['#6a9fab',0],
+  drywall:['#ddd8c9',3],wrap:['#b9c9c1',5],siding:['#718980',1],wire:['#c98a41',0],
+  gravel:['#9b9f92',3],soil:['#a58a6b',3]
+};
+const rgb = hex => [1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255);
+const add=(a,b)=>a.map((v,i)=>v+b[i]);
+const sub=(a,b)=>a.map((v,i)=>v-b[i]);
+const mul=(a,n)=>a.map(v=>v*n);
+const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const unit=a=>mul(a,1/(Math.hypot(...a)||1));
+const average=verts=>mul(verts.reduce(add,[0,0,0]),1/verts.length);
+const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+function term(id,group,name,purpose,placement,importance,aliases=''){
+  if(terms.has(id)||!groups[group]||![name,purpose,placement,importance].every(Boolean)) throw Error('Invalid glossary entry '+id);
+  terms.set(id,{id,group,name,purpose,placement,importance,aliases,scenes:new Set()});
+}
+function makePiece(id,verts,faces,material,grain){
+  if(!palette[material]||!verts.flat().every(Number.isFinite)) throw Error('Invalid geometry or material for '+id+' '+material);
+  const center=average(verts);
+  const obj={id,num:pieces.length+1,scene:sceneName,verts,faces:[],center,material,grain};
+  for(const indices of faces){
+    const pts=indices.map(i=>verts[i]);
+    let n=unit(cross(sub(pts[1],pts[0]),sub(pts[2],pts[0])));
+    if(Math.hypot(...n)<.1) continue;
+    if(dot(n,sub(average(pts),center))<0) n=mul(n,-1);
+    obj.faces.push({pts,n});
+  }
+  pieces.push(obj);
+}
+function prism(id,c,axes,material,grain){
+  const verts=[];
+  for(let i=0;i<8;i++) verts.push(axes.reduce((p,axis,j)=>add(p,mul(axis,(i&(1<<j))?.5:-.5)),c));
+  makePiece(id,verts,[[0,4,6,2],[1,3,7,5],[0,1,5,4],[2,6,7,3],[0,2,3,1],[4,5,7,6]],material,unit(grain));
+}
+function box(id,x,y,z,w,h,d,mat){
+  const axes=[[w,0,0],[0,h,0],[0,0,d]];
+  prism(id,[x,y,z],axes,mat,axes[[w,h,d].indexOf(Math.max(w,h,d))]);
+}
+function beam(id,a,b,w,h,mat){
+  const axis=sub(b,a),dir=unit(axis);
+  const side=Math.hypot(dir[0],dir[2])>.0001?unit(cross([0,1,0],dir)):[1,0,0];
+  prism(id,mul(add(a,b),.5),[mul(side,w),mul(unit(cross(dir,side)),h),axis],mat,dir);
+}
+function panel(id,points,t,material){
+  const n=unit(cross(sub(points[1],points[0]),sub(points[2],points[0])));
+  const count=points.length, top=points.map((_,i)=>i), bottom=top.map(i=>i+count).reverse();
+  const vertices=[...points,...points.map(p=>sub(p,mul(n,t)))];
+  makePiece(id,vertices,[top,bottom,...top.map(i=>[i,(i+1)%count,(i+1)%count+count,i+count])],material,unit(sub(points[1],points[0])));
+}
+function getBounds(objects){
+  const lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];
+  for(const obj of objects) for(const v of obj.verts) for(let i=0;i<3;i++){lo[i]=Math.min(lo[i],v[i]);hi[i]=Math.max(hi[i],v[i]);}
+  return {lo,hi,center:mul(add(lo,hi),.5),spans:sub(hi,lo)};
+}
+
+{
+  const foundationTerms = [
+    ['footing', 'Strip footing', 'Spreads the weight of a wall over a wider strip of soil.', 'The broad concrete base under each exterior foundation wall.', 'A broad bearing surface helps limit settlement under the house.', 'continuous footing, wall footing, spread footing, footer'],
+    ['stem-wall', 'Foundation wall', 'Raises the floor above the ground and carries the wall and floor loads to the footing.', 'The short concrete wall between the perimeter footing and the wood sill plate.', 'It supports the wood frame around the crawlspace.', 'stem wall, crawlspace wall, perimeter foundation'],
+    ['pad-footing', 'Pad footing', 'Spreads the concentrated load from one support onto the soil.', 'A square concrete pad below each interior pier.', 'A post carries a large load through a small area. The pad gives that load a wider base.', 'isolated footing, pier footing, spread footing'],
+    ['pier', 'Concrete pier', 'Raises an interior support and transfers its load to a footing.', 'The concrete pedestal on a square pad below the center girder.', 'It provides a bearing point for the post and keeps the wood above the ground.', 'foundation pier, pedestal'],
+    ['rebar', 'Reinforcing bar', 'Helps concrete resist tension as the foundation bends.', 'Steel bars embedded in the concrete wall, visible here at the cutaway.', 'Concrete resists squeezing well. The embedded steel helps it resist being pulled apart.', 'rebar, reinforcing steel, reinforcement'],
+    ['sill-gasket', 'Sill gasket', 'Seals the joint and interrupts moisture movement from concrete to wood.', 'The thin strip between the concrete foundation and the wood sill plate.', 'Sealing this long joint helps keep drafts and dampness out of the floor framing.', 'sill sealer, capillary break, sill seal'],
+    ['sill-plate', 'Foundation sill plate', 'Provides a wood bearing surface for the floor frame.', 'The horizontal wood plate fastened on top of the foundation wall.', 'It links the wood floor platform to the foundation.', 'mud sill, mudsill, foundation plate, treated sill'],
+    ['anchor-bolt', 'Anchor bolt', 'Fastens the sill plate to the concrete with a nut and washer.', 'The bolt passes through the sill plate and extends down into the foundation.', 'The anchorage helps resist sliding and uplift at the wood-to-concrete connection.', 'sill anchor, foundation bolt, J-bolt, washer, nut'],
+    ['footing-drain', 'Footing drain', 'Collects groundwater and carries it to a suitable outlet or sump.', 'The perforated pipe in the stone alongside the footing.', 'It helps keep groundwater from building up against the foundation wall.', 'drain tile, perimeter drain, weeping tile'],
+    ['drain-stone', 'Drainage stone', 'Provides an open path for water to reach the footing drain.', 'The stone bed around the drain pipe at the exterior base of the wall.', 'The spaces between the stones allow water to move toward the pipe.', 'washed stone, drainage aggregate, gravel'],
+    ['ground-cover', 'Ground vapor retarder', 'Slows moisture from the ground from entering the crawlspace air.', 'Sheet material over the earth inside the foundation. Only a section is shown.', 'A continuous, sealed ground cover helps keep the framing above it drier.', 'ground vapor barrier, crawlspace liner, polyethylene'],
+    ['foundation-coating', 'Foundation dampproofing', 'Limits the movement of soil moisture through a foundation wall.', 'The dark coating on the outside face of the concrete below grade.', 'It helps keep the wall dry where it touches damp soil. Pressure from standing water calls for a waterproofing strategy.', 'damp proofing, below-grade coating'],
+  ];
+  const floorTerms = [
+    ['floor-joist', 'Floor joist', 'Carries the subfloor, people, furnishings, and other floor loads.', 'Repeated horizontal members spanning from an exterior sill to the center girder.', 'Together the joists carry floor loads to their supports and limit sag.', 'common joist, floor framing, dimensional lumber'],
+    ['rim-joist', 'Rim joist', 'Closes the floor edge and ties the joist ends together.', 'The outside band across the ends of floor joists at the perimeter.', 'It helps hold the joists upright and supports loads at the floor edge.', 'band joist, band board, rim board, perimeter joist'],
+    ['subfloor', 'Subfloor', 'Forms the structural deck beneath the finished flooring.', 'Wood panels laid across the top of the floor joists.', 'The panels distribute loads to several joists and help the platform resist sideways movement.', 'floor sheathing, structural floor deck, plywood'],
+    ['girder', 'Center girder', 'Collects loads from the floor joists and carries them to the supports below.', 'The deep built-up wood beam running along the middle of the crawlspace.', 'By supporting the joists partway across the house, it shortens their spans.', 'floor beam, built-up beam, drop beam, girder'],
+    ['support-post', 'Support post', 'Carries a concentrated load straight down.', 'Between the center girder and a concrete pier in the crawlspace.', 'It completes the load path from girder to footing.', 'column, girder post, wood post'],
+    ['floor-blocking', 'Solid blocking', 'Keeps neighboring joists upright and provides restraint between them.', 'Short, full-depth pieces fitted sideways between adjacent floor joists.', 'Blocking helps the joists hold their position and resist twisting.', 'joist blocking, solid bridging, floor blocking'],
+    ['cross-bridging', 'Cross bridging', 'Braces neighboring joists with crossed diagonal pieces.', 'An X-shaped pair between the sides of two floor joists.', 'The braces help restrain movement and keep the joists upright.', 'X bridging, herringbone bridging, diagonal bridging'],
+    ['trimmer-joist', 'Trimmer joist', 'Carries reactions from the ends of the header joists.', 'Along each long side of the rectangular opening in the floor. The trimmers shown are doubled.', 'It directs loads around the hole to the floor supports.', 'floor trimmer, doubled joist, trimming joist'],
+    ['header-joist', 'Header joist', 'Catches the ends of joists interrupted by a floor opening.', 'Across each short end of the opening, between the trimmer joists.', 'It redirects the cut joist loads into the opening’s side members.', 'floor header, framed opening, stair opening, floor access opening'],
+    ['tail-joist', 'Tail joist', 'Supports the shorter strip of floor next to an opening.', 'A shortened joist running from a bearing point to a header at the opening.', 'The header gives the cut end a new support.', 'cut joist, shortened joist'],
+    ['joist-hanger', 'Joist hanger', 'Cradles a framing member where it meets the side of another member.', 'The formed metal seats under member ends around the floor opening.', 'The hanger and its specified fasteners transfer load across the joint.', 'metal hanger, face-mount hanger, framing connector'],
+  ];
+  const wallTerms = [
+    ['stud', 'Common stud', 'Supports the wall coverings and, in a bearing wall, carries loads from above.', 'One of the evenly spaced vertical members between the wall plates.', 'Studs form the wall frame and give sheathing and drywall a fastening surface.', 'wall stud, framing stud, stud bay, upright'],
+    ['bottom-plate', 'Bottom plate', 'Locates the lower ends of the studs and fastens the wall to the floor.', 'The horizontal board at the base of each framed wall, interrupted at a doorway.', 'It keeps the stud layout together and transfers forces into the floor platform.', 'sole plate, wall plate, shoe plate'],
+    ['top-plate', 'Top plate', 'Connects the stud tops and provides a bearing surface.', 'The lower of the two horizontal boards along the top of the exterior wall.', 'It ties the studs together beneath the framing above.', 'first top plate, lower top plate, wall plate'],
+    ['cap-plate', 'Second top plate', 'Overlaps joints in the first top plate and ties meeting walls together.', 'The upper board in the double top plate, immediately below the roof framing.', 'The overlapping joints help the wall tops act together.', 'double top plate, cap plate, upper top plate, tie plate'],
+    ['corner-stud', 'Corner stud assembly', 'Joins intersecting wall frames and provides an attachment point at the corner.', 'A group of studs where an end wall meets a long exterior wall.', 'The corner needs both a structural connection and backing for the wall finishes.', 'corner post, framing corner, stud pack'],
+    ['king-stud', 'King stud', 'Provides a full-height side member beside a framed opening.', 'Immediately outside the shorter jack stud on each side of the door or window.', 'It stiffens the opening and gives the header and jack stud a full-height connection.', 'full-height opening stud, king'],
+    ['jack-stud', 'Jack stud', 'Supports an end of the header above an opening.', 'The shorter upright just inside each king stud, directly under the header.', 'It carries the header’s load down to the wall base.', 'trimmer stud, shoulder stud, jack'],
+    ['header', 'Wall header', 'Spans a door or window opening and carries loads to its sides.', 'The deep horizontal member above the rough opening, bearing on jack studs here.', 'It lets the space below stay open while loads pass safely around it.', 'lintel, window header, door header, rough opening'],
+    ['rough-sill', 'Rough sill', 'Forms the bottom of a framed window opening.', 'The horizontal board between the jack studs under a window.', 'It establishes the opening height and provides support for the window assembly.', 'window rough sill, sill framing, window sill'],
+    ['cripple-stud', 'Cripple stud', 'Fills the short framing runs above a header or beneath a rough sill.', 'Aligned with surrounding studs in the short spaces above and below openings.', 'These pieces support the plates or sill and give wall coverings a fastening surface.', 'cripple, short stud, header cripple, sill cripple'],
+    ['wall-backing', 'Wall backing', 'Provides solid wood for attaching an item between studs.', 'Short horizontal blocks fitted into stud bays, shown along the front wall.', 'Cabinets, rails, and other wall-mounted items can fasten to this backing.', 'nailer, wall blocking, backing block, cabinet blocking'],
+    ['partition', 'Partition wall', 'Divides the interior into rooms.', 'The short interior stud wall meeting the back wall. This example is nonbearing.', 'A partition can support finishes and services. Some interior walls also carry loads from above.', 'nonbearing wall, non-load-bearing wall, room divider'],
+    ['bearing-wall', 'Load-bearing wall', 'Supports the weight of framing above it as well as the wall itself.', 'The rear exterior stud wall under one side of the roof in this example.', 'It passes roof loads down through the floor edge to the foundation.', 'bearing wall, load bearing wall, load path'],
+  ];
+  for (const [group, entries] of [['foundation', foundationTerms], ['floor', floorTerms], ['walls', wallTerms]]) {
+    for (const [id, name, purpose, placement, importance, aliases] of entries) {
+      term(id, group, name, purpose, placement, importance, aliases);
+    }
+  }
+
+  // Positive Z is the window-and-door elevation. Intervals make cutaway edges explicit.
+  const runX = (id, left, right, y, z, height, depth, material) =>
+    box(id, (left + right) / 2, y, z, right - left, height, depth, material);
+  const runZ = (id, back, front, x, y, width, height, material) =>
+    box(id, x, y, (back + front) / 2, width, height, front - back, material);
+
+  // The exposed pieces at the near wall are a teaching cut through a continuous assembly.
+  for (const z of [-3.6, 3.6]) {
+    runX('footing', -5.74, 5.74, -1.45, z, 0.28, 0.68, 'concrete');
+  }
+  for (const x of [-5.4, 5.4]) {
+    runZ('footing', -3.26, 3.26, x, -1.45, 0.68, 0.28, 'concrete');
+  }
+  const longWallSegments = [[-5.52,5.52,-3.6],[-5.52,0.72,3.6],[3.12,5.52,3.6]];
+  for (const [a, b, z] of longWallSegments) {
+    runX('stem-wall', a, b, -0.87, z, 0.88, 0.24, 'concrete');
+  }
+  for (const x of [-5.4,5.4]) {
+    runZ('stem-wall', -3.48, 3.48, x, -0.87, 0.24, 0.88, 'concrete');
+  }
+  runX('foundation-coating', -5.49, -3.05, -0.95, 3.725, 0.70, 0.012, 'membrane');
+  for (const y of [-1.12,-0.65]) {
+    runX('rebar', 0.72, 3.12, y, 3.60, 0.024, 0.024, 'steel');
+  }
+  for (const x of [1.0,1.65,2.30,2.95]) {
+    box('rebar', x, -0.92, 3.586, 0.025, 0.96, 0.025, 'steel');
+  }
+  for (const z of [-3.6,3.6]) {
+    runX('sill-gasket', -5.49, 5.49, -0.42, z, 0.02, 0.20, 'membrane');
+    runX('sill-plate', -5.49, 5.49, -0.365, z, 0.09, 0.18, 'darkwood');
+  }
+  for (const x of [-5.4,5.4]) {
+    runZ('sill-gasket', -3.5, 3.5, x, -0.42, 0.20, 0.02, 'membrane');
+    runZ('sill-plate', -3.51, 3.51, x, -0.365, 0.18, 0.09, 'darkwood');
+  }
+  // Show one cast-in bolt in section, along with the exposed washer and nut at each sample.
+  for (const x of [-4.1,-2.25,-0.38,1.43,3.27,5.0]) {
+    const z = 3.55;
+    box('anchor-bolt', x, -0.493, z, 0.028, 0.46, 0.028, 'steel');
+    runX('anchor-bolt', x-0.015, x+0.11, -0.715, z, 0.03, 0.03, 'steel');
+    box('anchor-bolt', x, -0.313, z, 0.076, 0.014, 0.076, 'metal');
+    box('anchor-bolt', x, -0.292, z, 0.043, 0.028, 0.043, 'steel');
+  }
+  for (const x of [-4.8,-1.6,1.6,4.8]) {
+    box('pad-footing', x, -1.45, 0, 0.80, 0.28, 0.80, 'concrete');
+    box('pier', x, -1.17, 0, 0.37, 0.28, 0.37, 'concrete');
+    box('support-post', x, -0.855, 0, 0.19, 0.35, 0.19, 'darkwood');
+  }
+  box('ground-cover', -2.60, -1.537, -1.82, 5.27, 0.014, 3.39, 'membrane');
+  box('ground-cover', -2.60, -1.42, -3.466, 5.27, 0.22, 0.016, 'membrane');
+
+  // A cut end exposes the bore. The ring is formed from ten thin planar facets.
+  const pipeLeft = -4.85, pipeRight = -1.95, pipeZ = 4.0, pipeY = -1.49, radius = 0.084;
+  runX('drain-stone', -5.02, -1.85, -1.56, 4.03, 0.105, 0.38, 'gravel');
+  runX('drain-stone', -4.85, -3.42, -1.46, 4.035, 0.13, 0.36, 'gravel');
+  for (let face = 0; face < 10; face++) {
+    const angleA = face * Math.PI / 5, angleB = (face + 1) * Math.PI / 5;
+    const p = (x,a) => [x, pipeY + radius*Math.cos(a), pipeZ + radius*Math.sin(a)];
+    panel('footing-drain', [p(pipeLeft,angleA),p(pipeLeft,angleB),p(pipeRight,angleB),p(pipeRight,angleA)], 0.009, 'pipe');
+  }
+
+  for (const z of [-0.079,0,0.079]) {
+    box('girder', 0, -0.50, z, 10.78, 0.36, 0.078, 'darkwood');
+  }
+  for (const z of [-3.64,3.64]) {
+    runX('rim-joist', -5.48, 5.48, -0.18, z, 0.28, 0.06, 'wood');
+  }
+  for (let j = -9; j <= 9; j++) {
+    const x = j*0.6;
+    if (j === 0 || j === 3) {
+      const mate = j === 0 ? -0.061 : 0.061;
+      for (const offset of [0,mate]) {
+        runZ('trimmer-joist', -3.61, 3.61, x+offset, -0.18, 0.06, 0.28, 'wood');
+      }
+    } else if (j === 1 || j === 2) {
+      runZ('tail-joist', 0, 0.59, x, -0.18, 0.06, 0.28, 'wood');
+      runZ('tail-joist', 2.26, 3.61, x, -0.18, 0.06, 0.28, 'wood');
+      runZ('floor-joist', -3.61, 0, x, -0.18, 0.06, 0.28, 'wood');
+    } else {
+      runZ('floor-joist', -3.61, 3.61, x, -0.18, 0.06, 0.28, 'wood');
+    }
+  }
+  for (const z of [0.62,2.23]) {
+    runX('header-joist', 0.03, 1.77, -0.18, z, 0.28, 0.06, 'wood');
+    for (const x of [0.6,1.2]) {
+      const side = z < 1 ? -1 : 1;
+      const hangerZ = z + side*0.071;
+      box('joist-hanger', x, -0.32, hangerZ, 0.094, 0.016, 0.081, 'metal');
+      for (const dx of [-0.042,0.042]) {
+        box('joist-hanger',x+dx,-0.219,hangerZ,0.013,0.19,0.081,'metal');
+        box('joist-hanger',x+dx*1.8,-0.219,z+side*0.038,0.067,0.19,0.012,'metal');
+      }
+    }
+  }
+  for (const x of [-4.5,-3.9,-3.3,-2.7]) {
+    box('floor-blocking',x,-0.18,1.66,0.54,0.28,0.063,'wood');
+  }
+  for (const x of [3.6,4.2,4.8]) {
+    beam('cross-bridging',[x+0.03,-0.071,2.12],[x+0.57,-0.289,2.12],0.045,0.043,'wood');
+    beam('cross-bridging',[x+0.03,-0.289,2.17],[x+0.57,-0.071,2.17],0.045,0.043,'wood');
+  }
+  // The model removes several panels to reveal joists. Thin border strips retain the wall bearing line.
+  function deckPatch(x0,x1,z0,z1) {
+    box('subfloor',(x0+x1)/2,-0.02,(z0+z1)/2,x1-x0,0.04,z1-z0,'ply');
+  }
+  for (let row=0; row<6; row++) {
+    const z0=-3.67+row*1.2, z1=z0+1.194;
+    let left=-5.48;
+    const coverTo=row<3 ? 5.48 : (row===3 ? -0.6 : -2.4);
+    const edges=[-4.8,-2.4,0,2.4,4.8,5.48].map(x=>x+(row%2 ? 1.2 : 0));
+    for (const endpoint of edges.concat([coverTo])) {
+      const right=Math.min(coverTo,endpoint);
+      if (right>left+0.01) deckPatch(left,right,z0,z1);
+      left=Math.max(left,right+0.006);
+    }
+  }
+  deckPatch(-5.48,5.48,3.53,3.68);
+  deckPatch(5.33,5.48,-0.07,3.53);
+
+  // Wall-axis helpers keep every member oriented correctly on long and gable walls.
+  const studWidth=0.064, wallDepth=0.14, lowerTop=2.768;
+  function wallBox(id,axis,plane,u0,u1,y0,y1,depth=wallDepth,material='wood') {
+    if (axis==='x') box(id,(u0+u1)/2,(y0+y1)/2,plane,u1-u0,y1-y0,depth,material);
+    else box(id,plane,(y0+y1)/2,(u0+u1)/2,depth,y1-y0,u1-u0,material);
+  }
+  function upright(id,axis,plane,u,y0,y1) {
+    wallBox(id,axis,plane,u-studWidth/2,u+studWidth/2,y0,y1);
+  }
+  for (const [axis,plane,lo,hi,openings] of [
+    ['x',3.6,-5.47,5.47,[[-2.5,-0.9,1],[1.6,2.6,0]]],
+    ['x',-3.6,-5.47,5.47,[]],
+    ['z',5.4,-3.53,3.53,[[-0.95,0.95,1]]],
+    ['z',-5.4,-3.53,3.53,[]],
+  ]) {
+    const door = openings.find(opening=>opening[2]===0);
+    if (door) {
+      wallBox('bottom-plate',axis,plane,lo,door[0],0,0.062);
+      wallBox('bottom-plate',axis,plane,door[1],hi,0,0.062);
+    } else wallBox('bottom-plate',axis,plane,lo,hi,0,0.062);
+    const mid=(lo+hi)/2;
+    wallBox('top-plate',axis,plane,lo,mid-0.002,lowerTop,2.834);
+    wallBox('top-plate',axis,plane,mid+0.002,hi,lowerTop,2.834);
+    // Upper boards lap the first layer at the corners and across its middle splice.
+    const lap=axis==='x' ? -wallDepth : wallDepth;
+    wallBox('cap-plate',axis,plane,lo-lap,mid+1.798,2.834,2.9);
+    wallBox('cap-plate',axis,plane,mid+1.802,hi+lap,2.834,2.9);
+    const cornerLo=lo+0.044,cornerHi=hi-0.044;
+    for (const pos of [cornerLo,cornerHi]) upright('corner-stud',axis,plane,pos,0.062,lowerTop);
+    for (let n=1; n<Math.round((hi-lo)/0.6); n++) {
+      const u=Math.round((lo+0.07+n*0.6)*100)/100;
+      if (u>=cornerHi-0.08 || openings.some(([a,b])=>u>a-0.165 && u<b+0.165)) continue;
+      upright(axis==='x' && plane<0 ? 'bearing-wall' : 'stud',axis,plane,u,0.062,lowerTop);
+    }
+    for (const [a,b,sill] of openings) {
+      const headY=2.15, headTop=2.40;
+      for (const [u,sign] of [[a,-1],[b,1]]) {
+        upright('jack-stud',axis,plane,u+sign*studWidth*0.5,0.062,headY);
+        upright('king-stud',axis,plane,u+sign*studWidth*1.5,0.062,lowerTop);
+      }
+      wallBox('header',axis,plane,a-studWidth,b+studWidth,headY,headTop,wallDepth,'darkwood');
+      if (sill) wallBox('rough-sill',axis,plane,a,b,sill-0.064,sill);
+      const spaces=Math.ceil((b-a)/0.6);
+      for (let n=1;n<spaces;n++) {
+        const u=a+(b-a)*n/spaces;
+        upright('cripple-stud',axis,plane,u,headTop,lowerTop);
+        if (sill) upright('cripple-stud',axis,plane,u,0.062,sill-0.064);
+      }
+    }
+  }
+  for (const x of [3.9,4.5]) {
+    box('wall-backing',x,1.40,3.6,0.536,0.14,wallDepth,'wood');
+  }
+  // A short interior partition is independent of the exterior roof-bearing walls.
+  const partX=-3.6;
+  runZ('partition',-3.53,-1.36,partX,0.03,0.11,0.06,'wood');
+  runZ('partition',-3.53,-1.36,partX,2.80,0.11,0.064,'wood');
+  for (const z of [-3.50,-2.95,-2.40,-1.85,-1.39]) {
+    box('partition',partX,1.414,z,0.11,2.708,0.06,'wood');
+  }
+}
+
+// Working wall, stair, and utility details for the timber-house teaching model.
+{
+  const vocabulary = {
+    exterior: [
+      ['e-sheathing','Wall sheathing','Covers the studs with a continuous backing. The wood panels shown can also brace the wall when fastened as designed.','On the outside face of the stud wall, behind the water-control layer.','It supports the layers outside it and helps the framed wall resist sideways forces.','OSB, oriented strand board, plywood sheathing, structural sheathing'],
+      ['e-wrap','Housewrap','Forms the water-resistive barrier in this wall and drains water that gets behind the siding.','Over the sheathing and integrated with flashing at openings.','A continuous drainage path keeps rainwater from soaking the wood.','WRB, house wrap, water-resistive barrier, drainage plane, building wrap'],
+      ['e-furring','Furring strip','Holds the siding away from the housewrap to form a drainage and drying gap.','Vertical strips between the wrap and the horizontal siding in this example.','The gap gives water a route down and provides an attachment surface for the siding.','rainscreen batten, strapping, rainscreen gap'],
+      ['e-siding','Lap siding','Sheds most rain from the face of the wall.','Horizontal courses on the outside, with each upper board overlapping the board below.','The overlap directs water outward while protecting underlying materials.','clapboard, weatherboard, bevel siding, cladding'],
+      ['e-corner','Corner board','Finishes the joint where siding ends at an outside corner.','Vertical trim at the end of the siding courses.','It protects vulnerable board ends and gives the siding a clean stopping point.','outside corner trim, corner trim'],
+      ['e-frame','Window frame','Holds the sash and anchors the window unit in its opening.','The stationary perimeter around the sash. Its top is the head, its sides are jambs, and its bottom is the sill.','A square, supported frame lets the sash fit and seal.','window jamb, window sill, window head, fixed frame'],
+      ['e-sash','Window sash','Holds the glass together as one framed panel.','Inside the fixed window frame, directly around the glass.','In an operable window, the sash moves while the outer frame stays attached to the wall.','sash rail, sash stile, casement sash'],
+      ['e-glazing','Glazing','Admits daylight and provides a view through the window.','The glass area held inside the sash.','It separates the indoor space from the weather while letting light through.','windowpane, pane, glass, insulated glass unit'],
+      ['e-pan','Sill pan flashing','Collects water that reaches the bottom of the window opening and directs it outside.','Below the window frame, across the rough sill and turned up at the ends.','It gives leaks a way out before they can soak the framing.','sill flashing, pan flashing, window pan'],
+      ['e-jamb-flash','Jamb flashing','Seals the sides of the window installation against water entry.','Vertical strips at both sides of the unit, overlapping the ends of the sill pan.','It connects the window edges to the surrounding drainage plane.','flashing tape, side flashing, window flashing'],
+      ['e-head-flash','Head flashing','Diverts water over the top of an opening.','Over the window head and side flashing, tied into the water-resistive barrier above.','It keeps runoff moving past the opening instead of behind the frame.','window head flashing, drip cap, cap flashing'],
+      ['e-door-jamb','Door jamb','Provides the fixed sides of the doorway that carry the hinges and latch hardware.','Along the two vertical sides of the door leaf. A head jamb joins them at the top.','A secure frame keeps the door aligned so it can swing and latch.','door frame, hinge jamb, strike jamb, head jamb'],
+      ['e-door','Door leaf','Opens or closes the passage through the wall.','The moving panel fitted inside the jambs and above the threshold.','The leaf, hardware and seals work together to control access and drafts.','door slab, entry door, exterior door'],
+      ['e-threshold','Threshold','Forms the finished transition under the entry door.','Across the bottom of the doorway where indoor and outdoor floors meet.','Its profile and seal help keep wind-driven water and air out.','door sill, entry sill'],
+      ['e-weatherstrip','Weatherstripping','Compresses against a closed door to limit air and water leaks.','Along the door stops at the jambs and head.','It seals the clearance that the door needs in order to move.','weather seal, compression seal, door gasket']
+    ],
+    interior: [
+      ['i-batt','Batt insulation','Slows heat flow through the insulated part of the wall.','Fitted into open spaces between the framing members.','Gaps or compressed areas reduce its ability to insulate the wall evenly.','cavity insulation, fiberglass batt, mineral wool batt'],
+      ['i-drywall','Drywall','Creates a smooth finish surface on the room side of the framing.','Gypsum panels fastened to studs or other framing behind the painted wall.','It encloses the wall cavity and can contribute to fire and sound control as part of an assembly.','wallboard, gypsum board, plasterboard, sheetrock'],
+      ['i-baseboard','Baseboard','Covers the joint between the wall finish and the floor.','Along the bottom edge of the finished interior wall.','It hides the edge joint and protects the wall from everyday knocks.','base molding, base trim, skirting'],
+      ['i-floor','Finish flooring','Provides the surface people walk on.','At the top of the floor assembly, above its supporting layers.','It takes foot traffic and everyday wear while the structure carries the load.','finished floor, hardwood flooring, floor covering'],
+      ['i-casing','Door casing','Covers the joint between the jamb and the wall finish.','Around the room-side edges of the doorway.','It hides the installation gap and protects the edge of the drywall.','door trim, architrave, casing'],
+      ['i-stringer','Stair stringer','Supports the steps along the slope of the stair.','Below the treads and risers. The cut stringers shown have a stepped upper edge.','It transfers weight from each step to the supports at the ends of the flight.','cut stringer, stair carriage'],
+      ['i-tread','Stair tread','Forms the walking surface of each step.','Across the top of the stringers at each step.','Its depth and surface affect footing throughout the flight.','step, stair step'],
+      ['i-riser','Stair riser','Closes the vertical face between neighboring treads in this closed-riser stair.','Directly below each tread’s front edge.','It closes the opening between steps. The height change between treads is called the rise.','closed riser, rise'],
+      ['i-nosing','Stair nosing','Forms the projecting front edge of a tread.','At the leading edge of each step, just past the face of the riser.','A consistent edge helps people find the next foothold.','tread nose, bullnose'],
+      ['i-landing','Landing','Provides a level surface at the end of a stair flight.','At the upper end of this flight. Other landings can occur at the bottom or between flights.','It gives people space to enter, leave or change direction on the stairs.','stair landing, half landing'],
+      ['i-newel','Newel post','Anchors the stair rail assembly.','At the ends and changes of direction of the railing.','It gives the sloping rail and its infill a secure termination.','newel, stair post'],
+      ['i-baluster','Baluster','Fills the space below the top rail on an open side.','The repeated upright spindles between the stair and the top rail.','Together with the rail and posts, the balusters form a barrier along the edge.','spindle, picket, stair balustrade'],
+      ['i-handrail','Handrail','Offers a continuous handhold along the flight.','The sloping rail alongside the steps, within reach while climbing or descending.','It provides support and helps a person regain balance.','stair rail, banister'],
+      ['i-guard','Landing guard','Forms a protective barrier along the open edge of a landing.','The level railing beside the upper platform.','It helps prevent someone from stepping or falling over the edge.','guardrail, guard, landing rail']
+    ],
+    services: [
+      ['s-panel','Electrical panel','Distributes electricity to the branch circuits that serve the home.','The metal cabinet that houses the breakers.','It groups circuit protection and provides a place to identify individual circuits.','breaker panel, distribution panel, load center, panelboard'],
+      ['s-breaker','Circuit breaker','Opens its circuit if the current exceeds its protective trip limits.','The small handled devices fitted inside the electrical panel.','It helps protect circuit wiring against excessive current.','breaker, overcurrent protection'],
+      ['s-cable','Branch-circuit cable','Carries power from a breaker to devices on that circuit.','Routed through protected spaces in the building to electrical boxes.','It allows each circuit to serve its intended lights or outlets.','wiring, cable, branch circuit'],
+      ['s-box','Electrical box','Encloses electrical connections and supports a device.','Recessed into the wall behind a receptacle, switch or cover.','It protects the connections and gives the device a stable mounting point.','device box, outlet box, junction box'],
+      ['s-receptacle','Receptacle','Provides a plug-in connection for electrical equipment.','The slotted device mounted in a box at the wall surface.','It provides a convenient connection to a branch circuit.','outlet, socket, duplex receptacle'],
+      ['s-fixture','Sink','Receives water from the faucet and discharges it through a drain.','The basin above the visible supply pipes and trap.','It is where the clean-water and drainage systems meet a daily household use.','lavatory, plumbing fixture, basin'],
+      ['s-supply','Water supply line','Carries clean water under pressure to a fixture.','The pair of smaller pipes running toward the faucet.','Separate hot and cold supplies let the fixture deliver water at the desired temperature.','potable water, hot water, cold water, supply pipe'],
+      ['s-stop','Fixture shutoff valve','Stops flow to one fixture for service.','Under the sink where each supply line connects to the faucet tubing.','It lets that fixture be isolated without shutting off the entire house.','angle stop, isolation valve, stop valve'],
+      ['s-trap','P-trap','Retains a small water seal in the bend after a fixture drain.','In the curved drain fitting directly below the sink.','The water seal blocks sewer gases from entering the room through the drain.','fixture trap, water seal, p trap'],
+      ['s-drain','Drain pipe','Carries used water away from the fixture by gravity.','Downstream of the trap and into the vertical drain below the vent connection.','It moves wastewater toward the building drain.','waste line, drainpipe, DWV, drainage pipe'],
+      ['s-vent','Plumbing vent','Lets air move through the drainage system as wastewater flows.','The pipe rising above the fixture drain connection and continuing toward open air.','It limits pressure changes that could empty a trap’s water seal.','vent pipe, drain vent, sanitary vent'],
+      ['s-handler','Air handler','Moves air through a forced-air heating or cooling system.','The equipment cabinet between the return and supply ducts.','Its blower circulates air between the equipment and the rooms it serves.','blower, fan coil, HVAC equipment'],
+      ['s-supplyduct','Supply duct','Carries conditioned air from the equipment toward a room.','The upper duct connecting the air handler to the supply register.','It distributes heated or cooled air to the occupied space.','ductwork, forced air, supply air, HVAC'],
+      ['s-return','Return duct','Carries room air back to the equipment.','Between the return grille and the intake side of the air handler.','It completes the circulation path so the system can move air through the home.','return air, return-air duct'],
+      ['s-register','Supply register','Delivers air into the room through a louvered face.','At the room end of a supply duct.','Its louvers direct incoming air, and many registers include an adjustable damper.','air register, supply vent, diffuser'],
+      ['s-grille','Return grille','Lets room air enter the return duct.','On the room-facing end of the return path.','An open return path lets the blower draw air back from the room.','return air grille, return vent']
+    ]
+  };
+  for (const [group, entries] of Object.entries(vocabulary)) {
+    for (const [id, name, purpose, placement, importance, aliases] of entries) {
+      term(id, group, name, purpose, placement, importance, aliases);
+    }
+  }
+
+  // One sloped plank per course. Thin strips of the underlying layers remain visible.
+  function siding(left, right, top, z, lower = 0) {
+    const courses = Math.max(1, Math.round((top - lower) / .172));
+    const exposure = (top - lower) / courses;
+    for (let i = 0; i < courses; i++) {
+      const y = lower + i * exposure;
+      panel('e-siding', [[left,y,z+.014],[right,y,z+.014],[right,y+exposure+.009,z],[left,y+exposure+.009,z]], .016, 'siding');
+    }
+  }
+  scene('house');
+  box('e-sheathing', -4.524,1.45,3.679,1.812,2.9,.023,'osb');
+  box('e-wrap', -4.69,1.45,3.694,1.48,2.9,.005,'wrap');
+  for (const x of [-5.36,-4.91,-4.42]) box('e-furring',x,1.45,3.715,.067,2.9,.036,'wood');
+  siding(-5.38,-4.51,2.89,3.751);
+  box('e-corner',-5.392,1.45,3.765,.115,2.91,.055,'white');
+
+  scene('enclosure');
+  // A single cutaway wall. Give the wall layers window and door openings.
+  const wallSections = [
+    [-2.55,-1.72,0,2.65],[-.32,.74,0,2.65],[1.8,2.45,0,2.65],
+    [-1.72,-.32,0,.85],[-1.72,-.32,2.03,2.65],[.74,1.8,2.12,2.65]
+  ];
+  function wallLayer(id, z, depth, mat, cutoff, start=-2.55) {
+    for (const [lo,hi,bottom,top] of wallSections) {
+      const left = Math.max(lo,start), right = Math.min(hi,cutoff);
+      if (right > left) box(id,(left+right)/2,(bottom+top)/2,z,right-left,top-bottom,depth,mat);
+    }
+  }
+  wallLayer('i-drywall',-.13,.018,'drywall',2.45);
+  wallLayer('i-batt',-.035,.14,'insulation',2.45);
+  wallLayer('e-sheathing',.058,.022,'osb',2.26);
+  wallLayer('e-wrap',.075,.006,'wrap',2.08);
+  for (const x of [-2.46,-1.96,-1.53,-1.05,-.57,-.21,.29,.62,1.09,1.60,1.9]) {
+    for (const [left,right,bottom,top] of wallSections) {
+      if (x >= left && x <= right) box('e-furring',x,(bottom+top)/2,.103,.047,top-bottom,.048,'wood');
+    }
+  }
+  siding(-2.5,-1.87,2.65,.15);
+  siding(-1.87,.53,.68,.15);
+  siding(-1.87,.53,2.65,.15,2.27);
+  siding(-.16,.53,2.27,.15,.68);
+  box('e-corner',-2.51,1.325,.16,.08,2.65,.067,'white');
+  const windowX = -1.02;
+  box('e-pan',windowX,.85,.031,1.51,.027,.38,'metal');
+  box('e-pan',windowX,.819,.217,1.51,.073,.017,'metal');
+  for (const x of [-1.756,-.284]) box('e-pan',x,.88,.03,.035,.087,.37,'metal');
+  for (const x of [-1.755,-.285]) box('e-jamb-flash',x,1.45,.108,.113,1.24,.014,'membrane');
+  box('e-head-flash',windowX,2.088,.10,1.67,.132,.015,'membrane');
+  box('e-head-flash',windowX,2.032,.160,1.62,.019,.134,'metal');
+  for (const x of [-1.684,-.356]) box('e-frame',x,1.44,.107,.066,1.18,.139,'white');
+  for (const y of [.882,1.997]) box('e-frame',windowX,y,.107,1.274,.064,.139,'white');
+  const sashLeft=-1.621, sashRight=-.419;
+  for (const x of [sashLeft,sashRight]) box('e-sash',x,1.442,.113,.055,1.049,.079,'darkwood');
+  for (const y of [.941,1.942]) box('e-sash',windowX,y,.113,1.148,.055,.079,'darkwood');
+  box('e-glazing',windowX,1.44,.105,1.148,.947,.023,'glass');
+  for (const x of [.774,1.766]) box('e-door-jamb',x,1.065,-.003,.067,2.115,.257,'wood');
+  box('e-door-jamb',1.27,2.091,-.003,.929,.058,.257,'wood');
+  for (const x of [.819,1.722]) box('e-weatherstrip',x,1.039,-.053,.022,2.04,.032,'rubber');
+  box('e-weatherstrip',1.27,2.052,-.053,.919,.023,.032,'rubber');
+  box('e-threshold',1.27,.029,.029,1.063,.058,.36,'metal');
+  // A partly open door reveals the jamb and seal. The decorative panels and lever turn with it.
+  const ux=Math.cos(.40), uz=Math.sin(.40), hinge=.808;
+  function doorPoint(along, y, offset) {
+    return [hinge+along*ux-offset*uz, y, .092+along*uz+offset*ux];
+  }
+  function doorFace(lo,hi,bottom,top,offset,thick,mat) {
+    panel('e-door',[doorPoint(lo,bottom,offset),doorPoint(hi,bottom,offset),doorPoint(hi,top,offset),doorPoint(lo,top,offset)],thick,mat);
+  }
+  doorFace(0,.917,.062,2.052,.02,.044,'siding');
+  for (const [lo,hi] of [[.07,.44],[.48,.847]]) {
+    doorFace(lo,hi,.19,.87,.036,.017,'siding');
+    doorFace(lo,hi,1.04,1.91,.036,.017,'siding');
+  }
+  doorFace(.769,.82,.94,1.055,.048,.03,'metal');
+  beam('e-door',doorPoint(.794,1,.05),doorPoint(.794,1,.097),.022,.022,'metal');
+  beam('e-door',doorPoint(.794,1,.097),doorPoint(.686,1,.097),.026,.023,'metal');
+  for (const x of [.706,1.834]) box('i-casing',x,1.07,-.17,.081,2.14,.051,'white');
+  box('i-casing',1.27,2.149,-.17,1.209,.083,.051,'white');
+  for (const [lo,hi] of [[-2.55,.67],[1.876,2.45]])
+    box('i-baseboard',(lo+hi)/2,.066,-.167,hi-lo,.132,.052,'white');
+  for (let i=0;i<6;i++) box('i-floor',-.05,-.024,-.202-i*.129,5,.045,.127,'wood');
+
+  scene('stairs');
+  const count=8, run=.285, rise=.176, first=1.51, stairWidth=1.08;
+  for (let i=0; i<count; i++) {
+    const front=first-i*run, back=front-run, y=(i+1)*rise;
+    box('i-tread',(front+back)/2,y-.019,0,run,.038,stairWidth,'wood');
+    box('i-riser',front-.012,y-rise/2-.017,0,.023,rise-.035,stairWidth-.048,'white');
+    box('i-nosing',front+.015,y-.019,0,.031,.038,stairWidth,'darkwood');
+    for (const z of [-.434,.028,.489]) {
+      const zFront=z+.024;
+      const top=y-.039, lowFront=Math.max(0,top-.29-rise), lowBack=Math.max(0,top-.29);
+      panel('i-stringer',[[back,lowBack,zFront],[front,lowFront,zFront],[front,top,zFront],[back,top,zFront]],.049,'darkwood');
+    }
+  }
+  const lastBack=first-count*run, platformY=(count+1)*rise;
+  box('i-riser',lastBack-.014,platformY-rise/2-.017,0,.027,rise-.035,stairWidth-.048,'white');
+  box('i-landing',lastBack-.45,platformY-.08,0,.9,.16,stairWidth,'wood');
+  const railZ=-.49, topX=lastBack-.05, bottomX=first-.075;
+  const bottomRailY=rise+.89, topRailY=platformY+.89;
+  const railAt=x=>bottomRailY+(topRailY-bottomRailY)*(bottomX-x)/(bottomX-topX);
+  for (const [x,y,h] of [[bottomX,rise,.96],[topX,platformY,.96],[lastBack-.854,platformY,.96]]) {
+    box('i-newel',x,y+h/2,railZ,.082,h,.082,'darkwood');
+    box('i-newel',x,y+h+.011,railZ,.098,.023,.098,'wood');
+  }
+  beam('i-handrail',[topX,topRailY,railZ],[bottomX,bottomRailY,railZ],.073,.069,'wood');
+  for (let i=0; i<count; i++) {
+    const y=(i+1)*rise;
+    for (const distance of [.134,.249]) {
+      const x=first-i*run-distance, top=railAt(x)-.018;
+      box('i-baluster',x,(y+top)/2,railZ,.028,top-y,.03,'white');
+    }
+  }
+  const guardEnd=lastBack-.852;
+  box('i-guard',(guardEnd+topX)/2,topRailY,railZ,topX-guardEnd,.069,.073,'wood');
+  for (let j=1; j<=5; j++) {
+    const x=topX-(topX-guardEnd)*j/6;
+    box('i-guard',x,platformY+.438,railZ,.028,.876,.03,'white');
+  }
+  // A short flooring sample marks the start of the flight.
+  for (let i=0;i<6;i++) box('i-floor',first+.338,-.027,-.451+i*.18,.68,.054,.176,'wood');
+
+  scene('services');
+  // A faceted round pipe is built from one end polygon, extruded along its own axis.
+  function tube(id, a, b, diameter, mat) {
+    const length=Math.hypot(b[0]-a[0],b[1]-a[1],b[2]-a[2]);
+    if (!length) return;
+    const n=b.map((v,i)=>(v-a[i])/length), cross=(u,v)=>[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+    const t=cross(Math.abs(n[1])>.85?[1,0,0]:[0,1,0],n), tLen=Math.hypot(...t);
+    const u=t.map(v=>v/tLen), v=cross(n,u), radius=diameter/2, vertices=[];
+    for (let j=0;j<8;j++) {
+      const angle=j*Math.PI/4;
+      vertices.push(b.map((p,k)=>p+radius*(u[k]*Math.cos(angle)+v[k]*Math.sin(angle))));
+    }
+    panel(id,vertices,length,mat);
+  }
+  function pipeRun(id, points, diameter, material) {
+    for (let i=1; i<points.length; i++) tube(id,points[i-1],points[i],diameter,material);
+  }
+  // Recessed electrical cabinet, insulated cover and controls.
+  box('s-panel',-2.20,1.56,.022,.694,.95,.201,'metal');
+  box('s-panel',-2.20,1.56,.133,.623,.87,.033,'zinc');
+  box('s-panel',-2.20,1.56,.153,.306,.68,.019,'rubber');
+  panel('s-panel',[[-2.55,1.107,.143],[-2.55,2.015,.143],[-2.85,2.015,.466],[-2.85,1.107,.466]],.020,'zinc');
+  for (let i=0;i<5;i++) for (const x of [-2.272,-2.128]) {
+    box('s-breaker',x,1.30+i*.126,.178,.129,.103,.043,'rubber');
+    box('s-breaker',x+(.008*(x< -2.2?1:-1)),1.30+i*.126,.212,.046,.072,.027,'metal');
+  }
+  pipeRun('s-cable',[[-2.05,1.09,.024],[-2.05,.61,.024],[-1.96,.48,.024],[-1.56,.48,.024],[-1.49,.55,.024],[-1.49,.77,.024]],.044,'wire');
+  box('s-box',-1.49,.84,.051,.168,.248,.114,'metal');
+  box('s-receptacle',-1.49,.84,.124,.129,.211,.04,'white');
+  for (const y of [.789,.886]) {
+    for (const x of [-1.507,-1.473]) box('s-receptacle',x,y+.012,.147,.009,.027,.006,'rubber');
+    box('s-receptacle',-1.49,y-.013,.147,.012,.012,.006,'rubber');
+  }
+  // Open basin and faucet above its supply, trap and vent.
+  const sx=-.445, frontZ=.565, rearZ=.10;
+  box('s-fixture',sx,1.15,.333,.67,.055,.435,'white');
+  for(const x of [sx-.332,sx+.332]) box('s-fixture',x,1.235,.333,.051,.139,.465,'white');
+  for(const z of [frontZ,rearZ]) box('s-fixture',sx,1.235,z,.715,.139,.042,'white');
+  pipeRun('s-fixture',[[sx,1.285,rearZ],[sx,1.436,rearZ],[sx,1.462,.137],[sx,1.462,.23],[sx,1.425,.245]],.039,'metal');
+  for (const [x,mat] of [[sx-.176,'copper'],[sx+.176,'water']]) {
+    pipeRun('s-supply',[[x,0,-.022],[x,.83,-.022],[x,.83,.08]],.032,mat);
+    pipeRun('s-supply',[[x,.866,.078],[x,.966,.075],[x,1.065,.10],[sx+(x-sx)*.65,1.13,.106]],.02,mat);
+    tube('s-stop',[x,.805,.079],[x,.869,.079],.068,'metal');
+    tube('s-stop',[x,.834,.085],[x,.834,.127],.039,'metal');
+    box('s-stop',x,.835,.144,.092,.034,.023,'metal');
+  }
+  pipeRun('s-trap',[[sx,1.122,.36],[sx,.895,.36],[sx+.019,.842,.36],[sx+.065,.81,.36],[sx+.117,.809,.36],[sx+.164,.835,.36],[sx+.184,.886,.36],[sx+.184,.914,.36],[sx+.213,.938,.36],[sx+.246,.94,.36]],.058,'white');
+  const drainX=.274;
+  pipeRun('s-drain',[[sx+.246,.94,.36],[drainX-.07,.922,.176],[drainX,.913,.135],[drainX,.72,.135],[drainX,.12,.135],[drainX+.04,.064,.135],[drainX+.303,.054,.135]],.067,'pipe');
+  tube('s-vent',[drainX,.912,.135],[drainX,2.31,.135],.061,'pipe');
+  // Supply leaves from above and return enters the side of the air handler.
+  box('s-handler',1.41,.561,.026,.68,1.12,.53,'metal');
+  for(const y of [.33,.852]) box('s-handler',1.41,y,.298,.619,.491,.029,'zinc');
+  for(const y of [.364,.883]) box('s-handler',1.664,y,.324,.044,.091,.028,'rubber');
+  box('s-supplyduct',1.41,1.56,.026,.438,.877,.36,'zinc');
+  box('s-supplyduct',1.895,1.902,.026,.536,.193,.36,'zinc');
+  box('s-supplyduct',2.14,1.901,.188,.181,.194,.254,'zinc');
+  for (const y of [1.27,1.68,1.954]) box('s-supplyduct',1.408,y,.027,.452,.021,.37,'metal');
+  box('s-return',1.984,.282,.026,.47,.364,.375,'zinc');
+  box('s-return',2.20,.281,.14,.209,.362,.273,'zinc');
+  function airFace(id,x,y,z,w,h) {
+    box(id,x,y,z,w,h,.034,'white');
+    box(id,x,y,z+.022,w-.035,h-.032,.016,'rubber');
+    const slots=5;
+    for(let i=0;i<slots;i++) box(id,x,y-h*.34+(h*.68)*i/(slots-1),z+.033,w-.048,.012,.022,'white');
+  }
+  airFace('s-register',2.14,1.902,.324,.41,.224);
+  airFace('s-grille',2.20,.282,.285,.408,.404);
+  scene('house');
+}
+
+{
+  // The house is a conventional tied-rafter gable. Alternate roof systems
+  // are shown on separate models to keep their different load paths clear.
+  const framing = [
+    ['common-rafter','Common rafter','Carries the roof deck and covering.','Runs up the roof slope from an exterior wall to the ridge.','Passes the weight of the roof and snow to the supporting framing.','stick framing, roof rafter'],
+    ['ridge-board','Ridge board','Provides a straight surface for fastening opposing rafters.','Stands on edge along the peak of this tied-rafter roof.','Aligns the two roof slopes. The low ties complete the structural triangle.','ridge, ridgeboard'],
+    ['rafter-tail','Rafter tail','Extends the rafter past its supporting wall.','Projects outside the wall plate at the low roof edge, or eave.','Supports the overhang that helps keep runoff away from the wall.','eave, overhang, eaves'],
+    ['ceiling-joist','Ceiling joist','Supports the ceiling finish below the attic.','Runs horizontally between opposite walls beside the rafter feet.','Carries ceiling loads. A joist properly connected across the building can also act as a rafter tie.','attic joist'],
+    ['rafter-tie','Rafter tie','Holds opposing rafter feet together in tension.','Spans between the lower ends of opposing rafters. Here a ceiling-level member serves as the tie.','Keeps the roof load from pushing the supporting walls outward.','tension tie, lower tie'],
+    ['collar-tie','Collar tie','Connects opposing rafters near their tops.','Crosses the upper third of the attic below the ridge.','Helps resist wind uplift that can separate rafters at the ridge.','upper tie'],
+    ['gable-stud','Gable-end stud','Provides backing for the triangular end wall.','Rises from the end wall to the underside of the gable roof.','Supports the gable-end covering and helps transfer wind loads into the framing.','gable, gable end, gable framing'],
+    ['lookout','Lookout','Supports the framing at a projecting gable edge.','Runs outward across the end wall to the fly rafter.','Carries the overhanging rake edge back to the main framing.','outlooker, outlook, gable ladder'],
+    ['fly-rafter','Fly rafter','Supports the outer edge of a projecting gable roof.','Follows the sloping rake beyond the gable-end wall.','Gives roof sheathing and gable trim a continuous nailing edge.','barge rafter, verge rafter'],
+    ['hurricane-tie','Rafter-to-wall tie','Connects a rafter to the supporting wall.','The bent steel strap wraps beside the rafter at the wall plate.','Helps transfer wind uplift from the roof to the wall connections below.','hurricane tie, hurricane clip, uplift connector'],
+    ['hip-rafter','Hip rafter','Supports jack rafters at an outside roof corner.','Runs diagonally from the outside corner toward a ridge end.','Provides a bearing and nailing line where roof planes slope away from one another.','hip, hipped roof'],
+    ['hip-jack','Hip jack rafter','Carries a shortened section of roof beside a hip.','Extends from the wall plate up to the hip rafter.','Lets the roof framing fill the narrowing triangular corner.','jack rafter'],
+    ['valley-rafter','Valley rafter','Supports the framing along an inside roof intersection.','Runs diagonally up the hollow where a projecting gable meets the main roof.','Collects loads from the shorter rafters beside the valley.','valley, intersecting roof, cross gable'],
+    ['valley-jack','Valley jack rafter','Carries a shortened section of roof above a valley.','Runs from the ridge down to the valley rafter.','Completes the framing where the intersecting roof cuts the slope short.','jack rafter'],
+    ['roof-truss','Roof truss','Spans between bearings using a connected framework of triangles.','The rear example shows a complete Fink truss. The matching front truss shows its individual parts.','Its chords, webs and joints work together to transfer roof loads to the walls.','prefabricated truss, engineered truss, Fink truss'],
+    ['top-chord','Top chord','Forms the upper edge of a roof truss.','Follows the sloping roofline on either side of the truss.','Receives load from the roof deck and passes it into the truss.','truss rafter'],
+    ['bottom-chord','Bottom chord','Joins the ends of this triangular truss and supports the ceiling.','Runs horizontally across the bottom of the truss.','Usually carries tension under gravity loads, keeping the bearings from spreading.','ceiling chord'],
+    ['truss-web','Truss web','Transfers force between the top and bottom chords.','Forms the W-shaped pattern inside this Fink truss.','Divides the span into connected triangles that resist changing shape.','diagonal web, W truss'],
+    ['truss-plate','Truss connector plate','Joins the wood members at a truss joint.','A toothed steel plate is pressed into each face where members meet.','Transfers forces through the joint so the members act as one truss.','gang nail plate, nail plate, gang plate, metal plate connector'],
+    ['truss-bearing','Truss bearing','Provides a support for the truss reaction.','At each end, the truss sits on the upper face of the supporting wall plate.','Carries the truss load into the supporting structure below.','bearing point, truss seat'],
+    ['birdsmouth','Birdsmouth','Gives a sloping rafter a flat seat on its supporting wall.','The notch at the rafter foot has a horizontal seat cut and a vertical heel cut.','Provides a bearing surface so the rafter can deliver load into the plate.','bird’s mouth, seat cut, heel cut, birds mouth'],
+    ['ridge-beam','Structural ridge beam','Carries the upper ends of the rafters.','Runs beneath the roof peak and bears on posts or other designed supports.','Transfers roof load vertically through those supports, allowing an open ceiling when designed for it.','load-bearing ridge, cathedral ceiling'],
+    ['ridge-post','Ridge support post','Carries a concentrated load from the ridge beam.','Stands vertically under a beam support point.','Continues the ridge-beam load path toward a bearing wall or footing.','ridge beam post'],
+    ['roof-run','Rafter run','Measures horizontal distance for a single roof slope.','The horizontal guide extends from the bearing line to the vertical line below the ridge.','Together with rise, it describes the steepness of the roof.','run, horizontal run'],
+    ['roof-rise','Roof rise','Measures the vertical change in roof elevation over a run.','The vertical guide extends from the eave reference level up to ridge level.','Pairs with horizontal run to express slope or calculate rafter geometry.','rise, vertical rise'],
+    ['roof-slope','Roof slope','Describes how steeply a roof rises.','The diagonal guide follows a roof with six units of rise for twelve units of horizontal run.','Slope affects drainage and the roof coverings that can be used.','pitch, roof pitch, rise over run, 6/12, six in twelve']
+  ];
+  const roofing = [
+    ['roof-deck','Roof sheathing','Provides a continuous surface for the roof layers.','Panels span the rafters directly below the underlayment. The exposed tan strip is the deck.','Supports the roof covering and helps brace the framing when properly attached.','roof deck, decking, plywood, OSB'],
+    ['roof-underlay','Synthetic underlayment','Provides a secondary water-shedding layer.','Covers the roof deck beneath the shingles and laps downslope layers.','Helps guide incidental water toward the eave if it passes the shingles.','roofing underlayment, synthetic felt, dry-in'],
+    ['ice-barrier','Ice and water barrier','Seals vulnerable deck areas with a self-adhering membrane.','The exposed strip follows the eave under the starter and field shingles. Similar membranes protect valleys and penetrations.','Helps resist water that backs up beneath the shingles at ice dams or other vulnerable spots.','ice guard, ice shield, ice and water shield, ice-and-water, peel and stick'],
+    ['starter-strip','Starter shingle','Forms the first sealed edge under the field shingles.','Runs along the eave beneath the first shingle course. Some systems also call for starter along the rake.','Helps seal the shingle edges against wind uplift and covers joints at the first course.','starter course, shingle starter'],
+    ['field-shingle','Architectural shingle','Sheds rain through overlapping asphalt shingle courses.','Covers the main field of the roof, laid in rows that overlap from the eave upward.','The laps carry water downslope and the staggered joints interrupt direct water paths.','laminated shingle, dimensional shingle, asphalt shingle, course, exposure'],
+    ['ridge-cap','Ridge cap shingle','Covers the joint between two roof slopes.','Bent cap shingles overlap one another along the ridge, over the ridge vent shown here.','Protects the vulnerable peak while finishing the uppermost shingle edges.','hip and ridge caps, ridge shingles, cap shingles, ridge capping'],
+    ['drip-edge','Drip edge','Directs runoff clear of the edge of the roof deck.','A folded metal lip follows the eaves and rakes beneath the roof covering.','Protects the wood edge and helps guide eave runoff toward the gutter.','metal edging, eave flashing, roof edge metal'],
+    ['fascia','Fascia','Closes and trims the vertical face at the eave.','Runs along the outer ends of the rafter tails, behind the gutter.','Protects the eave framing and gives the gutter line a finished edge.','fascia board, eave fascia'],
+    ['rake-trim','Rake board','Trims the sloping roof edge at a gable end.','Follows the exposed outside face of the fly rafter, from eave to ridge.','Covers the end framing along the gable overhang.','rake, bargeboard, verge board, gable fascia'],
+    ['soffit','Soffit','Closes the underside of the overhang.','Spans from the exterior wall to the fascia beneath the eave.','Protects the exposed underside and can carry intake vents.','eave soffit, boxed eaves'],
+    ['soffit-vent','Soffit vent','Admits outside air to a vented attic.','The perforated strip fits into the soffit under the eave.','Feeds the ventilation path from the low edge of the roof toward the exhaust near the peak.','intake vent, eave vent, vented soffit'],
+    ['vent-baffle','Vent baffle','Maintains a clear channel for intake air above the insulation.','Sits beneath the roof deck between rafters at a vented eave.','Keeps insulation from choking the path between soffit and attic.','rafter vent, ventilation chute, baffle'],
+    ['ridge-vent','Ridge vent','Lets air escape near the top of a vented attic.','Sits above an opening in the deck at the ridge and under the cap shingles.','Works with lower intake vents to move air through the attic.','exhaust vent, continuous ridge vent'],
+    ['gutter','Gutter','Collects water running off the lower roof edge.','The open trough follows the fascia at the eave and feeds a downspout.','Controls where roof runoff leaves the building.','eavestrough, rain gutter'],
+    ['downspout','Downspout','Carries collected rainwater from the gutter toward grade.','The pipe drops from the gutter outlet along the outside wall.','Allows collected roof water to discharge at a planned location away from the foundation.','rain leader, leader, downpipe'],
+    ['pipe-boot','Pipe boot flashing','Seals the joint around a pipe that passes through the roof.','A flexible collar grips the pipe and a broad flange laps into the roofing.','Diverts water around the circular opening while allowing some pipe movement.','vent boot, pipe jack, plumbing vent flashing, pipe flange'],
+    ['roof-vent-pipe','Plumbing vent stack','Connects the plumbing vent system to outdoor air.','Projects above the roof through a sealed pipe boot.','Helps balance air pressure in the drain system and lets sewer gases escape outdoors.','vent pipe, soil vent, plumbing stack'],
+    ['chimney','Masonry chimney','Encloses one or more flues that carry combustion gases outside.','The masonry stack projects through the roof.','Provides a protected path for exhaust and creates a roof intersection that needs flashing.','brick chimney, chimney stack'],
+    ['chimney-crown','Chimney crown','Sheds water off the top of the masonry.','Caps the top of the brick stack around the projecting flue.','Helps keep water from entering and damaging the masonry below.','chimney wash'],
+    ['flue-liner','Flue liner','Lines the passage carrying exhaust from a combustion appliance.','Projects above the chimney crown and continues down inside the masonry.','Helps contain hot gases inside the venting passage.','flue, clay liner, chimney flue'],
+    ['apron-flashing','Apron flashing','Turns water from a vertical surface onto the roof covering below.','The lower face of the chimney has one leg up the masonry and one over the downslope shingles.','Protects the joint at the bottom face of the chimney.','base flashing, front flashing, headwall flashing'],
+    ['step-flashing','Step flashing','Moves water past a sidewall in a series of overlapping steps.','Individual L-shaped pieces run up each chimney side, interwoven with the shingle courses.','Keeps the roof-to-wall joint protected as water travels down the slope.','sidewall flashing, step tins, baby tins'],
+    ['counterflashing','Counterflashing','Covers the upper edge of the base and step flashings.','The upper edge is set into masonry joints and its lower edge overlaps the flashing below.','Stops water running down the chimney from slipping behind the roof flashing.','counter flashing, cap flashing, reglet'],
+    ['cricket','Chimney cricket','Splits runoff and sends it around a chimney.','A small two-sided raised saddle sits on the uphill side of the chimney.','Reduces the water and debris that collect against a wide uphill obstruction.','saddle, chimney saddle, back cricket'],
+    ['kickout','Kick-out flashing','Turns sidewall runoff outward at the bottom of a roof slope.','The flared diverter sits at the eave at the end of the sidewall step flashing.','Sends concentrated water away from the wall and toward the gutter.','kickout, diverter flashing'],
+    ['skylight','Skylight','Brings daylight through a glazed roof opening.','The glass and frame sit over a raised curb in this example.','Admits light while the surrounding roof details manage water.','roof window, curb-mounted skylight'],
+    ['skylight-curb','Skylight curb','Raises and supports a curb-mounted skylight.','The wood frame surrounds the opening between the roof deck and the skylight frame.','Provides an attachment surface and a vertical face for flashing around the opening.','curb frame'],
+    ['valley-lining','Valley liner','Adds a waterproof layer along a roof valley.','Runs beneath the shingles in the inward angle between two roof slopes. The sample exposes a strip.','Backs up the roofing where the runoff from two slopes converges.','valley membrane, valley underlayment'],
+    ['valley-cover','Closed-cut valley','Routes water through a shingle-covered valley.','One roof slope carries shingles across the valley. The other slope has a trimmed edge along the drainage path.','Sheds water from both roof faces while keeping the valley liner protected.','closed valley, cut valley']
+  ];
+  for (const entry of framing) term(entry[0], 'roof', ...entry.slice(1));
+  for (const entry of roofing) term(entry[0], 'roofing', ...entry.slice(1));
+
+  // Give each roof skin an upward-facing winding, including the back slope.
+  function skin(id,x0,x1,z0,z1,elevation,d,mat) {
+    if (z0>z1) [z0,z1]=[z1,z0];
+    panel(id,[[x0,elevation(z0),z0],[x0,elevation(z1),z1],
+              [x1,elevation(z1),z1],[x1,elevation(z0),z0]],d,mat);
+  }
+  const roofY=z=>5.43-Math.abs(z)*.67;
+  const roofAt=offset=>z=>roofY(z)+offset;
+  const ridgeX=5.74, tailZ=4.04;
+  scene('house');
+  box('ridge-board',0,5.25,0,11.48,.32,.084,'darkwood');
+  for(let i=0;i<=18;i++){
+    const x=-5.4+.6*i;
+    for(const s of [-1,1]){
+      // The rafter body and its exposed tail are portions of the same board.
+      const axis=z=>roofY(z)-.13;
+      beam('common-rafter',[x,axis(.04),s*.04],[x,axis(3.6),s*3.6],.087,.218,'wood');
+      beam('rafter-tail',[x,axis(3.6),s*3.6],[x,axis(tailZ),s*tailZ],.087,.218,'wood');
+      if (i>12 && i%2===0){
+        const ox=x+.054;
+        box('hurricane-tie',ox,2.893,s*3.555,.025,.243,.072,'zinc');
+        box('hurricane-tie',ox+.04,2.794,s*3.575,.104,.045,.113,'zinc');
+      }
+    }
+    const joistId=i%4===0?'rafter-tie':'ceiling-joist';
+    box(joistId,x+(i===18?-.085:.085),2.997,0,.073,.193,7.23,'wood');
+    if(i%3===0 && i>0 && i<18) box('collar-tie',x+.079,4.657,0,.063,.14,1.974,'wood');
+  }
+  for(const s of [-1,1]){
+    for(let k=-5;k<=5;k++){
+      const z=k*.6, h=roofY(z)-.255-2.9;
+      box('gable-stud',s*5.4,2.9+h*.5,z,.118,h,.071,'wood');
+    }
+    for(const side of [-1,1]){
+      for(let i=1;i<6;i++){
+        const z=side*i*.69;
+        box('lookout',s*5.57,roofY(z)-.102,z,.36,.145,.104,'wood');
+      }
+      beam('fly-rafter',[s*5.74,roofY(.025)-.127,side*.025],[s*5.74,roofY(tailZ)-.127,side*tailZ],.08,.203,'wood');
+      if(s<0 || side<0) beam('rake-trim',[s*5.803,roofY(.025)-.108,side*.025],[s*5.803,roofY(tailZ)-.108,side*tailZ],.051,.226,'white');
+    }
+  }
+  for(const side of [-1,1]){
+    const back=side<0;
+    const deckEnd=back?1.5:.12;
+    // Visible steps run from shingles to membrane to OSB to bare rafters.
+    const edges=[-5.79,-3.95,-2.12,-.29,deckEnd].filter((n,i,a)=>i===0||n>a[i-1]);
+    if(edges[edges.length-1]!==deckEnd) edges.push(deckEnd);
+    for(let k=0;k+1<edges.length;k++) for(let row=0;row<3;row++){
+      const a=.055+row*1.329,b=row===2?tailZ:.055+(row+1)*1.329-.008;
+      skin('roof-deck',edges[k]+.004,edges[k+1]-.004,side*a,side*b,roofAt(.038),.05,'osb');
+    }
+    skin('roof-underlay',-5.81,back?.68:-.68,side*.05,side*3.21,roofAt(.059),.015,'membrane');
+    skin('ice-barrier',-5.81,back?.73:-.64,side*3.15,side*4.045,roofAt(.062),.014,'ice');
+    // Under the visible starter edge and overlapping first shingle row.
+    skin('starter-strip',-5.83,back?.25:-1.26,side*3.79,side*4.068,roofAt(.079),.02,'cap');
+    const shingleEnd=back?-.28:-1.73;
+    for(let row=0;row<18;row++){
+      const edge=4.055-row*.226,upper=Math.max(.028,edge-.223);
+      const xEnd=shingleEnd+(row%2===0?.12:-.10);
+      const xStart=-5.833;
+      // Every slab is a pickable exposed shingle face. Staggered joints
+      // reproduce the coursing without constructing invisible overlap.
+      for(let xx=xStart-(row%3)*.283;xx<xEnd;xx+=.869){
+        const a=Math.max(xStart,xx+.004),b=Math.min(xEnd,xx+.864);
+        if(b-a>.025) skin('field-shingle',a,b,side*upper,side*edge,roofAt(.102),.027,'shingle');
+      }
+    }
+    skin('ridge-vent',-5.45,-.77,side*.012,side*.149,roofAt(.136),.064,'rubber');
+    for(let x=-5.83;x<-.985;x+=.426){
+      const x1=Math.min(x+.42,-.985);
+      skin('ridge-cap',x,x1,side*.001,side*.194,roofAt(.167),.035,'cap');
+    }
+    // Deliberate cutaway at the eave leaves the remaining rafter tails exposed.
+    const xf=back?5.75:.96;
+    box('fascia',(xf-5.79)/2,roofY(tailZ)-.107,side*4.072,xf+5.79,.25,.052,'white');
+    const xe=back?1.50:.12;
+    skin('drip-edge',-5.825,xe,side*3.962,side*4.089,roofAt(.048),.011,'zinc');
+    box('drip-edge',(xe-5.825)/2,roofY(4.083)+.021,side*4.091,xe+5.825,.071,.019,'zinc');
+    box('soffit',-2.475,2.604,side*3.715,6.62,.035,.225,'white');
+    box('soffit',-2.475,2.604,side*3.984,6.62,.035,.147,'white');
+    box('soffit-vent',-2.475,2.604,side*3.871,6.62,.025,.084,'zinc');
+    for(let j=0;j<14;j++) box('soffit-vent',-5.6+j*.469,2.588,side*3.871,.28,.008,.036,'rubber');
+    if(!back){
+      for(const x of [1.5,2.1]) {
+        skin('vent-baffle',x-.226,x+.226,2.42,3.60,roofAt(-.088),.028,'ice');
+        for(const dx of [-.228,.228]) beam('vent-baffle',[x+dx,roofY(2.42)-.071,2.42],[x+dx,roofY(3.60)-.071,3.60],.028,.05,'ice');
+      }
+    }
+  }
+  // Open trough with an outlet and elbow returning the leader toward the wall.
+  const gutterX=-3.3,gutterLen=5.0,gy=2.622;
+  box('gutter',gutterX,gy,4.19,gutterLen,.034,.186,'zinc');
+  box('gutter',gutterX,gy+.073,4.094,gutterLen,.155,.022,'zinc');
+  box('gutter',gutterX,gy+.064,4.284,gutterLen,.06,.025,'zinc');
+  box('gutter',gutterX,gy+.115,4.26,gutterLen,.066,.045,'zinc');
+  for(const x of [gutterX-gutterLen/2,gutterX+gutterLen/2]) box('gutter',x,gy+.062,4.185,.027,.14,.182,'zinc');
+  const outletX=-5.14;
+  box('downspout',outletX,2.518,4.2,.121,.20,.11,'zinc');
+  beam('downspout',[outletX,2.43,4.2],[outletX,2.15,3.755],.122,.109,'zinc');
+  box('downspout',outletX,1.03,3.755,.124,2.27,.108,'zinc');
+  beam('downspout',[outletX,-.077,3.755],[outletX,-.215,4.1],.124,.11,'zinc');
+
+  // Faceted hollow pipe. Surface panels preserve the dark open flue at its top.
+  function tube(id,x,z,r0,r1,y0,y1,mat,segments=12){
+    for(let j=0;j<segments;j++){
+      const a=j*2*Math.PI/segments,b=(j+1)*2*Math.PI/segments;
+      panel(id,[[x+Math.cos(a)*r0,y0,z+Math.sin(a)*r0],[x+Math.cos(a)*r1,y1,z+Math.sin(a)*r1],[x+Math.cos(b)*r1,y1,z+Math.sin(b)*r1],[x+Math.cos(b)*r0,y0,z+Math.sin(b)*r0]],.012,mat);
+    }
+  }
+  const pz=1.67,px=-3.59,py=roofY(pz);
+  skin('pipe-boot',px-.268,px+.268,pz-.339,pz+.336,roofAt(.132),.021,'zinc');
+  tube('pipe-boot',px,pz,.205,.112,py+.17,py+.38,'rubber');
+  tube('roof-vent-pipe',px,pz,.093,.093,py+.358,py+.883,'pipe');
+
+  scene('junction');
+  const half=2.5,hipEnd=4.4,ridgeEnd=hipEnd-half,eaveY=.48,pitch=.67;
+  const peak=eaveY+half*pitch;
+  const main=(z)=>peak-Math.abs(z)*pitch;
+  const wing=(x)=>eaveY+(1.25-Math.abs(x))*pitch;
+  box('ridge-board',0,peak,0,ridgeEnd*2,.17,.066,'darkwood');
+  for(const sx of [-1,1]) for(const sz of [-1,1]){
+    beam('hip-rafter',[sx*ridgeEnd,peak,0],[sx*hipEnd,eaveY,sz*half],.125,.175,'darkwood');
+    for(let i=1;i<5;i++){
+      const t=i/5,x=ridgeEnd+half*t,z=half*t,y=eaveY+(half-z)*pitch;
+      beam('hip-jack',[sx*x,y,sz*z],[sx*x,eaveY,sz*half],.071,.12,'wood');
+      beam('hip-jack',[sx*x,y,sz*z],[sx*hipEnd,eaveY,sz*z],.071,.12,'wood');
+    }
+  }
+  for(let i=-3;i<=3;i++){
+    const x=i*.56,inside=Math.abs(x)<1.25;
+    beam('common-rafter',[x,peak,-.03],[x,eaveY,-half],.071,.14,'wood');
+    const z=inside?1.25+Math.abs(x):half;
+    beam(inside?'valley-jack':'common-rafter',[x,peak,.03],[x,main(z),z],.071,.14,'wood');
+  }
+  const wingPeak=wing(0),tip=4.22;
+  box('ridge-board',0,wingPeak,(1.25+tip)/2,.066,.15,tip-1.25,'darkwood');
+  for(const s of [-1,1]){
+    beam('valley-rafter',[0,wingPeak,1.25],[s*1.25,eaveY,2.5],.123,.174,'darkwood');
+    for(const z of [1.63,2.03,2.43,2.86,3.28,3.7,4.18]){
+      const to=z<2.5?z-1.25:1.25;
+      beam(z<2.5?'valley-jack':'common-rafter',[s*.024,wingPeak,z],[s*to,wing(to),z],.073,.123,'wood');
+    }
+  }
+  // A narrow cutaway along the left valley exposes deck and membrane.
+  function valleyBand(id,t0,t1,offset0,offset1,wingSide,lift,material,thickness){
+    const point=(t,o)=>{
+      const x=-1.25*t+o,z=1.25+1.25*t+o;
+      const y=wingSide?wing(x):main(z);
+      return [x,y+lift,z];
+    };
+    const pts=[point(t0,offset0),point(t1,offset0),point(t1,offset1),point(t0,offset1)];
+    // The first and second edges have a positive y cross product here.
+    panel(id,pts,thickness,material);
+  }
+  for(const w of [false,true]){
+    const side=w?1:-1;
+    valleyBand('roof-deck',.1,.97,Math.min(0,side*.31),Math.max(0,side*.31),w,.127,'osb',.063);
+    valleyBand('valley-lining',.14,.97,Math.min(0,side*.246),Math.max(0,side*.246),w,.15,'ice',.018);
+    for(let i=0;i<5;i++){
+      const a=.20+i*.112,b=a+.109;
+      // The two surfaces meet at a closed shingled water channel.
+      valleyBand('valley-cover',a,b,Math.min(0,side*.211),Math.max(0,side*.211),w,.175,'shingle',.021);
+    }
+  }
+
+  scene('truss');
+  // The front unit is dissected by member type. The rear unit is selectable as a whole.
+  for (const [z,whole] of [[-1.38,true],[.95,false]]){
+    const left=[-3.56,.62,z],right=[3.56,.62,z],apex=[0,2.65,z];
+    const lt=[-1.78,1.635,z],rt=[1.78,1.635,z],lb=[-1.17,.62,z],rb=[1.17,.62,z];
+    const id=(key)=>whole?'roof-truss':key;
+    beam(id('top-chord'),left,apex,.116,.178,'wood');
+    beam(id('top-chord'),apex,right,.116,.178,'wood');
+    beam(id('bottom-chord'),left,right,.116,.171,'darkwood');
+    for(const [a,b] of [[lt,lb],[lb,apex],[apex,rb],[rb,rt]]) beam(id('truss-web'),a,b,.11,.135,'wood');
+    for(const v of [left,right,apex,lb,rb,lt,rt]) for(const side of [-1,1])
+      box(id('truss-plate'),v[0],v[1],z+side*.065,.27,.184,.018,'zinc');
+    for (const x of [-3.54,3.54]) box('truss-bearing',x,.411,z,.29,.22,.48,'wood');
+  }
+
+  scene('flashing');
+  const flashY=(z)=>1.35-.47*z;
+  const cover=(id,x0,x1,z0,z1,lift,d,mat)=>skin(id,x0,x1,z0,z1,z=>flashY(z)+lift,d,mat);
+  const eave=2.22;
+  term('roof-sidewall','roofing','Roof sidewall','Forms the vertical wall beside a sloping roof.','Runs parallel to the direction of drainage at the left edge of this detail.','Creates an inside corner that needs a continuous path for runoff.','roof-to-wall, wall abutment');
+  term('skylight-head','roofing','Skylight head flashing','Diverts water around the top of the skylight.','The upper piece fits along the uphill side of the curb and under the roofing above.','Keeps runoff from entering behind the skylight.','skylight saddle, head flashing');
+  term('skylight-sill','roofing','Skylight sill flashing','Carries water from the skylight onto the roofing.','The apron runs along the downhill side of the curb and laps over the shingles below.','Gives water from the glazing and side flashings a path back onto the roof.','sill flashing, skylight apron');
+  function cutStrips(x0,x1,holes) {
+    let intervals=[[x0,x1]];
+    for (const [a,b] of holes){
+      const next=[];
+      for (const [lo,hi] of intervals){
+        if(a>=hi||b<=lo) next.push([lo,hi]);
+        else {if(a>lo) next.push([lo,a]); if(b<hi) next.push([b,hi]);}
+      }
+      intervals=next;
+    }
+    return intervals;
+  }
+  const chimney={x:-.40,z:-.08,w:1.32,d:1.08};
+  const sky={x:1.85,z:.37,w:1.24,d:1.48};
+  const holesAt=(zm0,zm1)=>[chimney,sky].filter(o=>zm0<o.z+o.d*.5&&zm1>o.z-o.d*.5).map(o=>[o.x-o.w*.5,o.x+o.w*.5]);
+  // Tiling around the actual openings makes their underside legible when rotated.
+  const boundaries=[-1.9,chimney.z-chimney.d/2,sky.z-sky.d/2,chimney.z+chimney.d/2,sky.z+sky.d/2,eave].sort((a,b)=>a-b);
+  for(let k=0;k+1<boundaries.length;k++){
+    const z0=boundaries[k],z1=boundaries[k+1];
+    for(const [a,b] of cutStrips(-3.49,3.49,holesAt(z0+.002,z1-.002)))
+      cover('roof-deck',a,b,z0,z1,0,.094,'osb');
+  }
+  for(let row=0;row<15;row++){
+    const high=eave-row*.277,low=Math.max(-1.9,high-.273);
+    const breaks=[low,...boundaries.filter(v=>v>low&&v<high),high].sort((a,b)=>a-b);
+    for(let k=0;k+1<breaks.length;k++) {
+      const a=breaks[k],b=breaks[k+1];
+      for(const [l,r] of cutStrips(-3.47,3.47,holesAt(a+.0001,b-.0001))){
+        for(let x=-3.49-(row%2)*.53;x<r;x+=1.08){
+          const lft=Math.max(l,x+.003),rgt=Math.min(r,x+1.072);
+          if(rgt-lft>.013)cover('field-shingle',lft,rgt,a,b,.022,.016,'shingle');
+        }
+      }
+    }
+  }
+  // Sidewall step flashings and the distinct flared kick-out at the bottom.
+  panel('roof-sidewall',[[-3.49,flashY(-1.9),-1.9],[-3.49,flashY(-1.9)+.98,-1.9],[-3.49,flashY(eave)+.98,eave],[-3.49,flashY(eave),eave]],.082,'ply');
+  function stepPiece(x,z0,z1,side){
+    const f=z=>flashY(z)+.036;
+    const xEdge=x+side*.153;
+    cover('step-flashing',Math.min(x,xEdge),Math.max(x,xEdge),z0,z1,.043,.018,'zinc');
+    panel('step-flashing',[[x,f(z0),z0],[x,f(z0)+.217,z0],[x,f(z1)+.217,z1],[x,f(z1),z1]],.015,'zinc');
+  }
+  for(let i=0;i<14;i++){
+    const z0=-1.9+i*.277;
+    stepPiece(-3.441,z0,z0+.273,1);
+  }
+  const kz=eave-.255,ky=flashY(kz)+.035;
+  panel('kickout',[[-3.428,ky,kz],[-3.428,ky+.243,kz],[-3.054,flashY(eave)+.228,eave],[-3.054,flashY(eave)+.025,eave]],.023,'zinc');
+  cover('kickout',-3.438,-3.048,kz,eave,.047,.021,'zinc');
+  box('gutter',0,flashY(eave)-.066,eave+.104,6.99,.035,.228,'zinc');
+  for(const dz of [.002,.208])box('gutter',0,flashY(eave)-.01,eave+dz,6.99,.115,.022,'zinc');
+
+  // Brick faces project a little above a mortar-colored core and its recessed joints.
+  const cx=chimney.x,cz=chimney.z,hw=chimney.w*.5,hd=chimney.d*.5;
+  const top=3.49,bt=flashY(cz+hd)-.23;
+  box('chimney',cx,(bt+top)/2,cz,hw*2,top-bt,hd*2,'concrete');
+  const courses=12,brickHeight=(top-bt)/courses;
+  for(let i=0;i<courses;i++){
+    const y=bt+(i+.5)*brickHeight;
+    for(const [wallLen,alongX] of [[hw*2,true],[hd*2,false]]){
+      const brickWidth=.461;
+      for(let u=-wallLen/2-(i%2)*brickWidth/2;u<wallLen/2;u+=brickWidth){
+        const a=Math.max(u,-wallLen/2)+.008,b=Math.min(u+brickWidth,wallLen/2)-.008;
+        if(b<=a)continue;
+        for(const s of [-1,1]){
+          if(alongX)box('chimney',cx+(a+b)/2,y,cz+s*(hd+.006),b-a,brickHeight-.017,.019,'brick');
+          else box('chimney',cx+s*(hw+.006),y,cz+(a+b)/2,.019,brickHeight-.017,b-a,'brick');
+        }
+      }
+    }
+  }
+  box('chimney-crown',cx,top+.052,cz,1.48,.114,1.23,'concrete');
+  const flueY=top+.208;
+  for(const s of [-1,1]){
+    box('flue-liner',cx+s*.254,flueY,cz,.056,.269,.491,'brick');
+    box('flue-liner',cx,flueY,cz+s*.218,.453,.269,.056,'brick');
+  }
+  const front=cz+hd,back=cz-hd;
+  cover('apron-flashing',cx-hw-.095,cx+hw+.095,front+.013,front+.30,.047,.014,'zinc');
+  box('apron-flashing',cx,flashY(front)+.15,front+.031,hw*2+.066,.249,.022,'zinc');
+  box('counterflashing',cx,flashY(front)+.302,front+.055,hw*2+.097,.194,.024,'copper');
+  for(const side of [-1,1]){
+    for(let i=0;i<4;i++){
+      const a=back+i*hd*.5,b=a+hd*.5-.006;
+      stepPiece(cx+side*(hw+.036),a,b,side);
+      box('counterflashing',cx+side*(hw+.063),flashY(b)+.251,(a+b)*.5,.024,.197,b-a+.014,'copper');
+    }
+  }
+  const saddleTip=[cx,flashY(back-.83)+.044,back-.83];
+  const saddlePeak=[cx,flashY(back)+.436,back];
+  for(const side of [-1,1]){
+    const pts=[saddleTip,saddlePeak,[cx+side*(hw+.057),flashY(back)+.047,back]];
+    panel('cricket',side>0?pts:pts.reverse(),.029,'zinc');
+  }
+  const sx=sky.x,sz=sky.z,sw=sky.w*.5,sd=sky.d*.5;
+  for(const side of [-1,1]){
+    cover('skylight-curb',sx+side*sw-.05,sx+side*sw+.05,sz-sd,sz+sd,.283,.255,'wood');
+    cover('skylight-curb',sx-sw+.041,sx+sw-.041,sz+side*sd-.049,sz+side*sd+.049,.283,.255,'wood');
+    cover('skylight',sx+side*sw-.066,sx+side*sw+.066,sz-sd-.055,sz+sd+.055,.33,.06,'metal');
+    cover('skylight',sx-sw+.047,sx+sw-.047,sz+side*sd-.061,sz+side*sd+.061,.33,.06,'metal');
+    for(let k=0;k<5;k++){
+      const z0=sz-sd+k*(2*sd/5);
+      stepPiece(sx+side*(sw+.056),z0,z0+2*sd/5-.005,side);
+    }
+  }
+  cover('skylight',sx-sw+.059,sx+sw-.059,sz-sd+.053,sz+sd-.053,.306,.036,'glass');
+  cover('skylight-head',sx-sw-.126,sx+sw+.126,sz-sd-.245,sz-sd-.024,.061,.022,'zinc');
+  box('skylight-head',sx,flashY(sz-sd)+.153,sz-sd-.053,sky.w+.141,.189,.022,'zinc');
+  cover('skylight-sill',sx-sw-.134,sx+sw+.134,sz+sd+.024,sz+sd+.258,.062,.022,'zinc');
+  box('skylight-sill',sx,flashY(sz+sd)+.144,sz+sd+.058,sky.w+.152,.191,.022,'zinc');
+
+  scene('slope');
+  // Beam-and-post construction, kept apart from the ridge-board example.
+  const rs=3.3,ry=2.87,raz=-.53;
+  box('ridge-beam',0,ry-.233,raz,.224,.439,2.16,'darkwood');
+  const postHeight=ry-.233-.439/2;
+  for(const z of [raz-.96,raz+.96]){
+    box('ridge-post',0,postHeight/2,z,.191,postHeight,.195,'wood');
+  }
+  // Section profiles keep the horizontal bearing notch visible on the front rafter.
+  function seatedRafter(side,z){
+    const point=(a,b)=>[side*a,b,z+.074];
+    const topAt=x=>ry-.5*x+.198,botAt=x=>ry-.5*x-.037;
+    const bearingX=3.19,bearingEnd=3.4,seat=botAt(bearingX);
+    const toWorld=(pts)=>side>0?pts.slice().reverse():pts;
+    const inner=.008;
+    const wall=[point(inner,topAt(inner)),point(bearingX,topAt(bearingX)),point(bearingX,botAt(bearingX)),point(inner,botAt(inner))];
+    const notch=[point(bearingX,topAt(bearingX)),point(bearingEnd,topAt(bearingEnd)),point(bearingEnd,seat),point(bearingX,seat)];
+    const tail=[point(bearingEnd,topAt(bearingEnd)),point(3.89,topAt(3.89)),point(3.89,botAt(3.89)),point(bearingEnd,botAt(bearingEnd))];
+    panel('common-rafter',toWorld(wall),.148,'wood');
+    panel('birdsmouth',toWorld(notch),.148,'endgrain');
+    panel('rafter-tail',toWorld(tail),.148,'wood');
+    // Small wall-top sample shows the bearing surface below the notch.
+    termSeat(side,seat,bearingX,bearingEnd,z);
+  }
+  term('rafter-bearing','roof','Rafter bearing','Provides the contact surface that supports the rafter foot.','The level seat at the birdsmouth rests on the wall plate.','Transfers roof load into the wall through direct wood-to-wood contact.','bearing seat, rafter seat');
+  function termSeat(side,y,x0,x1,z){
+    box('rafter-bearing',side*(x0+x1)/2,y-.105,z,x1-x0,.21,.44,'wood');
+  }
+  for(const z of [raz-.79,raz+.72]) for(const s of [-1,1])seatedRafter(s,z);
+  const base=ry-rs*.5, guideZ=1.00;
+  beam('roof-run',[0,base,guideZ],[rs,base,guideZ],.06,.052,'copper');
+  box('roof-rise',0,(ry+base)/2,guideZ,.061,ry-base,.06,'copper');
+  beam('roof-slope',[0,ry,guideZ],[rs,base,guideZ],.061,.055,'zinc');
+  scene('house');
+}
+
+{
+  scene('engineered');
+  const floorTypes = [
+    ['i-joist','Engineered wood I-joist','Carries floor loads with two wood flanges joined by a thin structural web.','The parallel I-shaped members under the subfloor, each spanning between the sill and the beam.','The flanges resist bending while the web transfers shear between them. Together they form one lightweight joist.','wood I-beam, wood I joist, engineered floor joist'],
+    ['i-flange','I-joist flange','Resists the stretching and squeezing that occur as a joist bends.','The wider wood strips along the top and bottom edges of an I-joist.','Keeping the flanges apart gives the joist bending strength. A cut or notch can seriously weaken a flange.','top flange, bottom flange, chord'],
+    ['i-web','I-joist web','Connects the flanges and carries shear, the force that tends to slide adjacent parts past one another.','The thin vertical panel between an I-joist’s two flanges. This example uses oriented strand board (OSB).','It lets the two flanges act together. Service holes must follow the rules for the particular joist.','web panel, OSB web, oriented strand board web'],
+    ['lvl-beam','Laminated veneer lumber beam','Supports the crossing joists and carries their reactions to the posts below.','The deep beam beneath the joists near the projecting edge of the floor.','Its layers of wood veneer run mainly in the same direction, along the beam, to carry bending loads.','LVL, structural composite lumber, engineered drop beam'],
+    ['engineered-rim','Engineered rim board','Closes the ends of an engineered floor and helps hold the joists upright.','A full-depth structural board across the joist ends. Part of the near corner is cut away to reveal their I shape.','It ties the floor perimeter together and can transfer loads through the floor edge.','rimboard, engineered band board, structural rim board'],
+    ['web-stiffener','Web stiffener','Reinforces the thin joist web where there is a concentrated force.','A short wood panel on each side of the front web, over the sill between the flanges.','At this bearing point the stiffeners help the web resist buckling. Their fit depends on the joist and the location of the load.','bearing stiffener, I-joist reinforcement'],
+    ['squash-block','Squash blocks','Carry a concentrated load through the depth of a floor, beside the joist.','The paired upright wood blocks directly beneath the cut-off column and on top of the beam.','They provide a short path around the joist for the load from above.','load-transfer block, crush block, column blocking'],
+    ['edge-blocking','I-joist blocking panel','Restrains joists at a bearing line and helps transfer forces across the floor.','Short full-depth panels between the joists, over the beam at the start of the overhang.','Bracing at the support helps prevent the joists from turning on their sides.','engineered blocking panel, cantilever blocking, rim board blocking'],
+    ['point-load','Point load','Concentrates weight into one small support area.','The cut-off wood column above the beam applies a load at its base.', 'The floor needs a continuous load path under that spot. Here the squash blocks carry the load to the beam.','concentrated load, column load, bearing point'],
+    ['floor-cantilever','Floor cantilever','Extends the floor past the line of support.','The projecting end of the front I-joist, beyond the outer face of the beam.', 'The portion extending back into the floor anchors the projection. The permitted overhang depends on the loads and joist design.','floor overhang, projecting joist, backspan'],
+    ['oc-spacing','On-center spacing','Describes the distance between the centerlines of repeated members.','The blue transverse marker beyond the joist ends connects the centers of the two front joists.','Center-to-center layout establishes consistent support spacing for the subfloor panels.','on centre, o.c., center to center, joist spacing'],
+    ['clear-span','Clear span','Measures the open distance a framing member crosses between its supports.','The long blue marker alongside the front joist runs from the inside face of the sill support to the near face of the beam.','The unsupported distance affects how much a member bends under load.','unsupported span, bearing face, joist span'],
+    ['floor-adhesive','Subfloor adhesive','Bonds the subfloor panel to the joist flange along the contact line.','The exposed bead on the top flange continues under the cut edge of the subfloor.','Used with the specified fasteners, it helps limit movement between the decking and the joists.','construction adhesive, glue bead, glued floor system'],
+    ['panel-tongue','Tongue-and-groove joint','Interlocks the edges of adjoining subfloor panels.','The narrow projecting tongue at the exposed panel edge fits a groove in the adjoining panel.','The interlocking edges support each other between joists and limit differences in height at the seam.','T&G, T and G, panel joint, subfloor seam'],
+  ];
+  for (const entry of floorTypes) term(entry[0],'floor',...entry.slice(1));
+
+  const zLines=[-1.65,-0.99,-0.33,0.33,0.99,1.65];
+  const left=-3.08, right=2.82, bearingFace=2.16;
+  const floorBottom=0.08, floorTop=0.54, flangeHeight=0.076;
+  function joistSegment(a,b,z,flangeId,webId) {
+    const x=(a+b)/2, length=b-a;
+    for (const y of [floorBottom+flangeHeight/2, floorTop-flangeHeight/2]) {
+      box(flangeId,x,y,z,length,flangeHeight,0.15,'wood');
+    }
+    box(webId,x,(floorTop+floorBottom)/2,z,length,floorTop-floorBottom-2*flangeHeight,0.029,'osb');
+  }
+  for (let i=0;i<zLines.length;i++) {
+    const z=zLines[i];
+    if (i===zLines.length-1) {
+      joistSegment(left,bearingFace,z,'i-flange','i-web');
+      joistSegment(bearingFace,right,z,'floor-cantilever','floor-cantilever');
+    } else if (i===zLines.length-2) {
+      joistSegment(left,right,z,'i-joist','i-joist');
+    } else {
+      joistSegment(left,right,z,'i-flange','i-web');
+    }
+  }
+
+  // A section through two foundations exposes their distinct bearing arrangements.
+  box('stem-wall',-2.96,-0.37,0,0.30,0.70,3.60,'concrete');
+  box('sill-plate',-2.96,0.03,0,0.30,0.10,3.60,'darkwood');
+  box('footing',-2.96,-0.82,0,0.54,0.20,3.77,'concrete');
+  for (const z of [-1.35,1.35]) {
+    box('pad-footing',2.00,-0.82,z,0.48,0.20,0.48,'concrete');
+    box('pier',2.00,-0.66,z,0.34,0.12,0.34,'concrete');
+    box('support-post',2.00,-0.51,z,0.22,0.18,0.22,'darkwood');
+  }
+  // Veneers run lengthwise along the beam. Their edges show at the cut end.
+  const plies=9, plyWidth=0.32/plies;
+  for (let i=0;i<plies;i++) {
+    box('lvl-beam',1.84+(i+0.5)*plyWidth,-0.17,0,plyWidth,0.50,3.63,i%3===0?'ply':'wood');
+  }
+  const rimDepth=0.053;
+  box('engineered-rim',left-rimDepth/2,0.31,0,rimDepth,0.46,3.45,'osb');
+  box('engineered-rim',right+rimDepth/2,0.31,-0.665,rimDepth,0.46,2.12,'osb');
+
+  // Reinforce the web at the bearing, with a visible gap beneath the top flange.
+  for (const dz of [-0.043,0.043]) {
+    box('web-stiffener',-2.955,0.301,1.65+dz,0.20,0.290,0.057,'ply');
+  }
+  for (const z of [-1.32,-0.66,1.32]) {
+    box('edge-blocking',2.00,0.31,z,0.063,0.46,0.51,'osb');
+  }
+  // The column stacks over full-depth blocks on either side of one joist.
+  for (const z of [0.205,0.455]) {
+    box('squash-block',2.00,0.31,z,0.23,0.46,0.092,'wood');
+  }
+  box('subfloor',2.00,0.565,0.33,0.65,0.05,0.60,'ply');
+  box('point-load',2.00,0.89,0.33,0.25,0.60,0.38,'darkwood');
+
+  // The deck steps back to expose the web, flanges and adhesive below it.
+  box('subfloor',-0.087,0.565,-1.028,6.02,0.05,1.394,'ply');
+  box('subfloor',-2.145,0.565,0.3315,1.90,0.05,1.321,'ply');
+  box('panel-tongue',-1.173,0.565,0.3315,0.044,0.022,1.315,'wood');
+  box('floor-adhesive',-1.50,0.548,0.99,2.50,0.016,0.027,'wire');
+
+  // Blue dimension marks depict distances, keeping physical members distinct.
+  const guideZ=1.97, guideY=0.09;
+  box('clear-span',(-2.81+1.84)/2,guideY,guideZ,1.84+2.81,0.019,0.019,'water');
+  for(const x of [-2.81,1.84]) {
+    box('clear-span',x,guideY,guideZ,0.021,0.021,0.22,'water');
+  }
+  const guideX=3.08;
+  box('oc-spacing',guideX,0.545,1.32,0.02,0.020,0.66,'water');
+  for (const z of [0.99,1.65]) {
+    box('oc-spacing',2.985,0.545,z,0.32,0.020,0.020,'water');
+  }
+  scene('house');
+}
+
+{
+  scene('rooflines');
+  const entries=[
+    ['roof-plane','Roof plane','Forms one flat, sloping face of the roof.','Each broad surface between the marked edges is a plane. A plane can be triangular or have several sides.','Water travels downhill across the plane. Its area and slope help determine the covering it needs.','facet, roof face, roof field'],
+    ['roof-ridge','Roof ridge','Forms the level peak where two opposing slopes meet.','Follow the high horizontal line along the main roof, or the shorter one above the projecting gable.','The roof covering must protect this joint while water drains away on both sides.','ridge line, ridgeline, peak'],
+    ['roof-hip','Roof hip','Forms an outside corner between two sloping roof planes.','Trace the diagonal line from a main ridge end down to an outside corner.','Water drains away from a hip on both sides. Cap material protects the exposed joint.','hip line, outside roof corner'],
+    ['roof-valley','Roof valley','Collects runoff where two sloping roof planes meet at an inside corner.','Follow either inward diagonal beside the projecting gable. The low end opens at the eave.','Two planes feed water into the same channel, making this joint particularly important for drainage.','valley line, inside roof corner'],
+    ['roof-eave','Eave','Forms the low roof edge where runoff leaves a slope.','Follow the level edges along the bottoms of the roof planes. Gutters often attach here.','Water needs a clear path past the fascia and away from the walls below.','eaves, eave line, gutter edge'],
+    ['roof-rake','Rake','Forms the sloping outside edge of a gable roof.','Follow either rising edge above the triangular end of the projecting wing.','Roofing and trim meet here, where the exposed edge is vulnerable to wind and rain.','rake edge, gable verge, gable edge'],
+    ['roof-gable','Gable','Closes the triangular end wall beneath two roof slopes.','The upright triangle is directly under the two rake edges at the front of the projecting wing.','Its framing and covering enclose the space beneath the roof and resist wind on the end wall.','gable end, gable wall, gabled end']
+  ];
+  for(const [id,name,purpose,where,why,related] of entries)term(id,'roofing',name,purpose,where,why,related);
+  const low=.48,k=.70,high=low+2*k;
+  const mainY=z=>high-Math.abs(z)*k,wingY=x=>low+(1-Math.abs(x))*k;
+  function plane(xz,level){
+    const pts=xz.map(([x,z])=>[x,level(x,z),z]);
+    if(cross(sub(pts[1],pts[0]),sub(pts[2],pts[0]))[1]<0)pts.reverse();
+    panel('roof-plane',pts,.045,'shingle');
+  }
+  plane([[-2,0],[2,0],[4,-2],[-4,-2]],(x,z)=>mainY(z));
+  for(const s of [-1,1])plane([[s*2,0],[s*4,-2],[s*4,2]],x=>high-(Math.abs(x)-2)*k);
+  plane([[-2,0],[2,0],[3,1],[-3,1]],(x,z)=>mainY(z));
+  plane([[-3,1],[0,1],[-1,2],[-4,2]],(x,z)=>mainY(z));
+  plane([[0,1],[3,1],[4,2],[1,2]],(x,z)=>mainY(z));
+  for(const s of [-1,1])plane([[0,1],[s,2],[s,3.58],[0,3.58]],x=>wingY(x));
+  const line=(id,a,b)=>beam(id,add(a,[0,.027,0]),add(b,[0,.027,0]),.068,.048,'metal');
+  line('roof-ridge',[-2,high,0],[2,high,0]);line('roof-ridge',[0,wingY(0),1],[0,wingY(0),3.58]);
+  for(const s of [-1,1]){
+    for(const t of [-1,1])line('roof-hip',[s*2,high,0],[s*4,low,t*2]);
+    line('roof-valley',[0,wingY(0),1],[s,low,2]);
+    line('roof-rake',[0,wingY(0),3.58],[s,low,3.58]);
+    line('roof-eave',[s*4,low,-2],[s*4,low,2]);
+    line('roof-eave',[s*4,low,2],[s,low,2]);line('roof-eave',[s,low,2],[s,low,3.58]);
+  }
+  line('roof-eave',[-4,low,-2],[4,low,-2]);
+  panel('roof-gable',[[-1,low,3.52],[1,low,3.52],[0,wingY(0)-.022,3.52]],.065,'siding');
+  scene('house');
+}
+
+function getCamera(yaw,pitch){
+  const forward=[Math.sin(yaw)*Math.cos(pitch),Math.sin(pitch),Math.cos(yaw)*Math.cos(pitch)];
+  const right=[Math.cos(yaw),0,-Math.sin(yaw)];
+  return {forward,right,up:cross(forward,right)};
+}
+function project(point,camera){
+  const rel=sub(point,camera.center);
+  return [camera.w/2+camera.pan[0]+dot(rel,camera.right)*camera.scale,
+    camera.h/2+camera.pan[1]-dot(rel,camera.up)*camera.scale,dot(rel,camera.forward)];
+}
+const light=getCamera(-.53,1.05);
+function geometryBuffer(objects,floorY,groundSize){
+  const data=[];
+  function face(pts,n,color,kind,serial,grain){
+    const across=unit(cross(n,grain));
+    for(let i=1;i<pts.length-1;i++){
+      const tri=[pts[0],pts[i],pts[i+1]];
+      const boundary=[true,i===pts.length-2,i===1];
+      const heights=tri.map((p,j)=>{
+        const a=tri[(j+1)%3],b=tri[(j+2)%3];
+        return Math.hypot(...cross(sub(a,p),sub(b,p)))/(Math.hypot(...sub(a,b))||1);
+      });
+      tri.forEach((p,j)=>{
+        const edges=boundary.map((flag,k)=>flag?(k===j?heights[k]:0):100.);
+        data.push(...p,...n,...color,kind,serial,dot(p,grain),dot(p,across),...edges);
+      });
+    }
+  }
+  for(const o of objects){
+    const [hex,kind]=palette[o.material],color=rgb(hex);
+    for(const f of o.faces) face(f.pts,f.n,color,kind,o.num,o.grain);
+  }
+  const s=groundSize;
+  face([[-s,floorY,-s],[-s,floorY,s],[s,floorY,s],[s,floorY,-s]],[0,1,0],[1,1,1],-1,0,[1,0,0]);
+  return new Float32Array(data);
+}
+const vertexSource=`
+attribute vec3 pos,normal,color,edge; attribute vec2 info,uv;
+uniform vec3 camCenter,camRight,camUp,camForward,lightCenter,lightRight,lightUp,lightForward;
+uniform vec2 camScale,pan; uniform float lightSpan,pass;
+varying vec3 vColor,vNorm,vPos,vShadow,vEdge; varying vec2 vUv,vInfo;
+void main(){
+  vec3 p=pos-camCenter, s=pos-lightCenter;
+  vShadow=vec3(dot(s,lightRight),dot(s,lightUp),-dot(s,lightForward))/lightSpan;
+  gl_Position=pass==1.0?vec4(vShadow,1.0):vec4(vec2(dot(p,camRight),dot(p,camUp))*camScale+pan,-dot(p,camForward)/150.0,1.0);
+  vColor=color;vNorm=normal;vPos=pos;vEdge=edge;vInfo=info;vUv=uv;
+}`;
+const fragmentSource=`
+precision highp float;
+varying vec3 vColor,vNorm,vPos,vShadow,vEdge; varying vec2 vUv,vInfo;
+uniform sampler2D shadeMap;uniform float pass,chosen,worldPixel,modelSpan;uniform vec3 lightForward,backdrop;uniform vec2 gridCenter;
+float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+1.0),f.x),f.y);}
+float visibility(){
+  vec3 s=vShadow*.5+.5;
+  if(min(s.x,s.y)<.002||max(s.x,s.y)>.998) return 1.;
+  float lit=0.;
+  for(int x=-1;x<=1;x++) for(int y=-1;y<=1;y++){
+    vec2 depth=texture2D(shadeMap,s.xy+vec2(float(x),float(y))/1024.).rg;
+    lit+=step(s.z-.0011,depth.x+depth.y/255.);
+  }
+  return lit/9.;
+}
+void main(){
+  float kind=vInfo.x, id=floor(vInfo.y+.5);
+  if(pass==1.){ if(kind<0.)discard;float z=gl_FragCoord.z*255.;gl_FragColor=vec4(floor(z)/255.,fract(z),0,1);return;}
+  if(pass==2.){gl_FragColor=vec4(mod(id,256.),mod(floor(id/256.),256.),floor(id/65536.),255.)/255.;return;}
+  float lit=visibility();
+  if(kind<0.){
+    vec2 dist=abs(fract(vPos.xz+.5)-.5);
+    float grid=1.-smoothstep(worldPixel*.28,worldPixel*1.3,min(dist.x,dist.y));
+    float fade=1.-smoothstep(modelSpan*.32,modelSpan*1.18,length(vPos.xz-gridCenter));
+    gl_FragColor=vec4(backdrop*(1.-.052*grid*fade)*(1.-.18*(1.-lit)),1.);return;
+  }
+  vec3 c=vColor;float seed=fract(id*.618034);
+  float edgeDist=min(vEdge.x,min(vEdge.y,vEdge.z));
+  if(kind==1.){
+    float wave=noise(vec2(vUv.x*1.65+seed*20.,vUv.y*6.));
+    float grain=noise(vec2(vUv.x*.9+seed*17.,vUv.y*95.+wave*3.));
+    c*=.94+.10*grain+.045*seed;
+  } else if(kind==2.||kind==3.||kind==6.){
+    float fleck=noise(vUv*vec2(45.,87.)+seed*33.);
+    c*=.94+.095*fleck+.045*seed;
+  }
+  if(abs(id-chosen)<.25)c=mix(c,vec3(.99,.39,.12),.89);
+  float diffuse=max(dot(vNorm,lightForward),0.);
+  vec3 illum=vec3(.68,.71,.74)+(.29*diffuse+.075*max(vNorm.y,0.))*vec3(1.04,1.,.91);
+  c*=illum*(.80+.20*lit);
+  float border=1.-smoothstep(.0004,clamp(worldPixel*.53,.002,.018),edgeDist);
+  c*=1.-border*.11;
+  gl_FragColor=vec4(c,1.);
+}`;
+function createGlRenderer(canvas){
+  const gl=canvas.getContext('webgl',{antialias:true,alpha:false,preserveDrawingBuffer:true});
+  if(!gl) return null;
+  const program=gl.createProgram();
+  for(const [type,source] of [[gl.VERTEX_SHADER,vertexSource],[gl.FRAGMENT_SHADER,fragmentSource]]){
+    const shader=gl.createShader(type);gl.shaderSource(shader,source);gl.compileShader(shader);
+    if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS)) throw Error(gl.getShaderInfoLog(shader));
+    gl.attachShader(program,shader);
+  }
+  gl.linkProgram(program);
+  if(!gl.getProgramParameter(program,gl.LINK_STATUS)) throw Error(gl.getProgramInfoLog(program));
+  gl.useProgram(program); gl.enable(gl.DEPTH_TEST);gl.disable(gl.DITHER);
+  const uniform=Object.fromEntries('camCenter camRight camUp camForward camScale pan lightCenter lightRight lightUp lightForward lightSpan pass shadeMap chosen worldPixel modelSpan backdrop gridCenter'.split(' ').map(k=>[k,gl.getUniformLocation(program,k)]));
+  const v3=(key,v)=>gl.uniform3fv(uniform[key],v),v2=(key,v)=>gl.uniform2fv(uniform[key],v),fl=(key,v)=>gl.uniform1f(uniform[key],v);
+  const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+  let offset=0;
+  for(const [name,n] of [['pos',3],['normal',3],['color',3],['info',2],['uv',2],['edge',3]]){
+    const a=gl.getAttribLocation(program,name);
+    gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,n,gl.FLOAT,false,64,offset*4);offset+=n;
+  }
+  function target(){
+    const fb=gl.createFramebuffer(),tex=gl.createTexture(),depth=gl.createRenderbuffer();
+    let width=0,height=0;
+    return {fb,tex,resize(w,h){
+      if(width===w&&height===h)return;
+      width=w;height=h;gl.bindFramebuffer(gl.FRAMEBUFFER,fb);
+      gl.bindTexture(gl.TEXTURE_2D,tex);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,w,h,0,gl.RGBA,gl.UNSIGNED_BYTE,null);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,tex,0);
+      gl.bindRenderbuffer(gl.RENDERBUFFER,depth);gl.renderbufferStorage(gl.RENDERBUFFER,gl.DEPTH_COMPONENT16,w,h);
+      gl.framebufferRenderbuffer(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.RENDERBUFFER,depth);
+      if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE)throw Error('3D display buffer unavailable');
+    }};
+  }
+  const shadow=target(),picking=target(),blank=gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D,blank);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([255,255,255,255]));
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);
+  shadow.resize(1024,1024);
+  v3('lightRight',light.right);v3('lightUp',light.up);v3('lightForward',light.forward);
+  gl.uniform1i(uniform.shadeMap,0);
+  let count=0,needShadow=true,needPick=true,wCss=1,hCss=1;
+  function drawTo(target,pass,w,h,bg){
+    gl.bindFramebuffer(gl.FRAMEBUFFER,target);gl.viewport(0,0,w,h);fl('pass',pass);
+    gl.clearColor(...bg,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    gl.drawArrays(gl.TRIANGLES,0,count);
+  }
+  return {
+    set(objects,bounds){
+      const span=Math.max(...bounds.spans,.2);
+      const geometry=geometryBuffer(objects,bounds.lo[1]-Math.max(.012,span*.002),Math.max(80,span*8));
+      gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,geometry,gl.STATIC_DRAW);
+      count=geometry.length/16;v3('lightCenter',bounds.center);fl('lightSpan',Math.hypot(...bounds.spans)*.75+.25);
+      fl('modelSpan',span);v2('gridCenter',[bounds.center[0],bounds.center[2]]);needShadow=true;
+    },
+    draw(c,selected,bg){
+      const dpr=Math.min(devicePixelRatio||1,2);
+      const w=Math.max(1,Math.round(c.w*dpr)),h=Math.max(1,Math.round(c.h*dpr));
+      wCss=c.w;hCss=c.h;
+      if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+      picking.resize(w,h);
+      v3('camCenter',c.center);v3('camRight',c.right);v3('camUp',c.up);v3('camForward',c.forward);
+      v2('camScale',[2*c.scale/c.w,2*c.scale/c.h]);v2('pan',[2*c.pan[0]/c.w,-2*c.pan[1]/c.h]);
+      fl('chosen',selected);fl('worldPixel',1/c.scale);v3('backdrop',bg);
+      if(needShadow){gl.bindTexture(gl.TEXTURE_2D,blank);drawTo(shadow.fb,1,1024,1024,[1,1,1]);needShadow=false;}
+      gl.bindTexture(gl.TEXTURE_2D,shadow.tex);drawTo(null,0,w,h,bg);
+      needPick=true;
+    },
+    pick(x,y){
+      if(needPick){drawTo(picking.fb,2,canvas.width,canvas.height,[0,0,0]);needPick=false;}
+      gl.bindFramebuffer(gl.FRAMEBUFFER,picking.fb);
+      const px=new Uint8Array(4);
+      gl.readPixels(clamp(Math.floor(x*canvas.width/wCss),0,canvas.width-1),
+        clamp(canvas.height-1-Math.floor(y*canvas.height/hCss),0,canvas.height-1),1,1,gl.RGBA,gl.UNSIGNED_BYTE,px);
+      gl.bindFramebuffer(gl.FRAMEBUFFER,null);
+      return px[0]+256*px[1]+65536*px[2];
+    }
+  };
+}
+
+// A depth buffer keeps intersections and picking accurate on devices without WebGL.
+function createSoftwareRenderer(canvas){
+  const ctx=canvas.getContext('2d',{willReadFrequently:true});
+  let objects=[],bounds,ids=null,w=1,h=1,ratio=1,zbuf;
+  const shadowLayer=document.createElement('canvas'),shade=shadowLayer.getContext('2d');
+  const colorText=(c,a=1)=>'rgba('+c.map(v=>Math.round(v*255)).join(',')+','+a+')';
+  return {
+    set(list,b){objects=list;bounds=b;},
+    draw(cam,selected,bg){
+      ratio=Math.min(devicePixelRatio||1,1.25,1200/cam.w);
+      w=Math.max(1,Math.round(cam.w*ratio));h=Math.max(1,Math.round(cam.h*ratio));
+      if(w!==canvas.width||h!==canvas.height||!ids){
+        canvas.width=w;canvas.height=h;shadowLayer.width=w;shadowLayer.height=h;
+        ids=new Uint32Array(w*h);zbuf=new Float32Array(w*h);
+      }
+      ids.fill(0);zbuf.fill(-Infinity);
+      const c={...cam,w,h,scale:cam.scale*ratio,pan:mul(cam.pan,ratio)};
+      const p=v=>project(v,c);
+      ctx.fillStyle=colorText(bg);ctx.fillRect(0,0,w,h);
+      const y=bounds.lo[1]-.02,span=Math.max(...bounds.spans),margin=span*.42;
+      const xmin=Math.floor(bounds.lo[0]-margin),xmax=Math.ceil(bounds.hi[0]+margin);
+      const zmin=Math.floor(bounds.lo[2]-margin),zmax=Math.ceil(bounds.hi[2]+margin);
+      const gridLine=(a,b)=>{const u=p(a),v=p(b);ctx.moveTo(u[0],u[1]);ctx.lineTo(v[0],v[1]);};
+      ctx.strokeStyle=colorText(mul(bg,.54),.15);ctx.lineWidth=.8;ctx.beginPath();
+      for(let x=xmin;x<=xmax;x++)gridLine([x,y,zmin],[x,y,zmax]);
+      for(let z=zmin;z<=zmax;z++)gridLine([xmin,y,z],[xmax,y,z]);ctx.stroke();
+      shade.clearRect(0,0,w,h);shade.fillStyle='black';
+      for(const o of objects){
+        const shadowPts=o.verts.map(v=>p(sub(v,mul(light.forward,(v[1]-y)/light.forward[1]))));
+        for(const f of o.faces){if(dot(f.n,light.forward)<.001)continue;
+          shade.beginPath();f.pts.forEach((v,i)=>{const uv=shadowPts[o.verts.indexOf(v)];i?shade.lineTo(uv[0],uv[1]):shade.moveTo(uv[0],uv[1]);});shade.closePath();shade.fill();}
+      }
+      ctx.globalAlpha=.12;ctx.drawImage(shadowLayer,0,0);ctx.globalAlpha=1;
+      const img=ctx.getImageData(0,0,w,h),pix=img.data;
+      for(const o of objects){
+        const coords=new Map(o.verts.map(v=>[v,p(v)]));
+        const base=o.num===selected?[1,.43,.17]:rgb(palette[o.material][0]);
+        for(const f of o.faces){
+          if(dot(f.n,c.forward)<.00001)continue;
+          const shadeValue=.695+.29*Math.max(dot(f.n,light.forward),0)+.072*Math.max(f.n[1],0);
+          const col=base.map(v=>Math.min(255,Math.round(v*shadeValue*255*(.98+.03*((o.num*.618)%1)))));
+          const pts=f.pts.map(v=>coords.get(v));
+          for(let t=1;t<pts.length-1;t++){
+            const a=pts[0],b=pts[t],e=pts[t+1];
+            const abx=b[0]-a[0],aby=b[1]-a[1],aex=e[0]-a[0],aey=e[1]-a[1];
+            const area=abx*aey-aby*aex;if(Math.abs(area)<.00001)continue;
+            const xmin=Math.max(0,Math.floor(Math.min(a[0],b[0],e[0]))),xmax=Math.min(w-1,Math.ceil(Math.max(a[0],b[0],e[0])));
+            const ymin=Math.max(0,Math.floor(Math.min(a[1],b[1],e[1]))),ymax=Math.min(h-1,Math.ceil(Math.max(a[1],b[1],e[1])));
+            for(let yy=ymin;yy<=ymax;yy++){
+              for(let xx=xmin;xx<=xmax;xx++){
+                const px=xx+.5-a[0],py=yy+.5-a[1],u=(px*aey-py*aex)/area,v=(abx*py-aby*px)/area;
+                if(u<0||v<0||u+v>1)continue;
+                const depth=a[2]+u*(b[2]-a[2])+v*(e[2]-a[2]),i=yy*w+xx;
+                if(depth<zbuf[i])continue;
+                zbuf[i]=depth;ids[i]=o.num;
+                pix[4*i]=col[0];pix[4*i+1]=col[1];pix[4*i+2]=col[2];
+              }
+            }
+          }
+        }
+      }
+      ctx.putImageData(img,0,0);
+    },
+    pick(x,y){return ids?.[clamp(Math.floor(y*ratio),0,h-1)*w+clamp(Math.floor(x*ratio),0,w-1)]||0;}
+  };
+}
+
+const root=document.getElementById('framing-atlas');
+const role=name=>root.querySelector('[data-role="'+name+'"]');
+const embedded=root.classList.contains('inline-atlas');
+for(const o of pieces){
+  const t=terms.get(o.id);
+  if(!t)throw Error('Part lacks a definition: '+o.id);
+  t.scenes.add(o.scene);
+}
+for(const t of terms.values())if(!t.scenes.size)throw Error('Term lacks a part: '+t.id);
+Object.assign(sceneNames,{slope:'Rafter seat & roof slope',engineered:'Engineered floor',rooflines:'Roof edges & faces'});
+const groupScenes={
+  all:['house'],foundation:['house'],floor:['house','engineered'],walls:['house'],
+  roof:['house','junction','truss','slope'],roofing:['house','rooflines','flashing','junction'],
+  exterior:['enclosure','house'],interior:['stairs','enclosure'],services:['services']
+};
+for(const g of Object.keys(groupScenes))groupScenes[g]=groupScenes[g].filter(s=>pieces.some(o=>o.scene===s));
+const preferred={all:'common-rafter',foundation:'stem-wall',floor:'floor-joist',walls:'header',roof:'common-rafter',roofing:'field-shingle',exterior:'e-frame',interior:'i-stringer',services:'s-trap'};
+const detailPreferred={junction:'valley-rafter',rooflines:'roof-valley',truss:'top-chord',slope:'birdsmouth',engineered:'i-joist',flashing:'step-flashing',stairs:'i-stringer',enclosure:'e-frame',services:'s-trap'};
+const defaults={house:[.61,.34],enclosure:[.33,.23],stairs:[.38,.28],services:[.33,.22],truss:[.28,.20],slope:[.25,.23],junction:[.55,.49],rooflines:[.56,.48],flashing:[.56,.44],engineered:[.56,.32]};
+let group='all',view='house',active=null,isolated=false,localParts=[],visible=[],viewTerms=[];
+let yaw=.61,pitch=.34,zoom=1,pan=[0,0],bounds,fitScale=1,focus,cam,selectedPoint=null,drawPending=false,chooseBest=false;
+let isTurning=false;
+let canvas=role('model'),renderer;
+try{renderer=createGlRenderer(canvas);}catch(e){console.warn('Using compatible 3D display mode.',e.message);}
+if(!renderer){const replacement=canvas.cloneNode(false);canvas.replaceWith(replacement);canvas=replacement;renderer=createSoftwareRenderer(canvas);}
+const stage=role('stage'),overlay=role('overlay'),overlayContext=overlay.getContext('2d');
+canvas.addEventListener('webglcontextlost',e=>{
+  e.preventDefault();
+  const fresh=canvas.cloneNode(false);canvas.replaceWith(fresh);canvas=fresh;
+  renderer=createSoftwareRenderer(canvas);renderer.set(visible,bounds);scheduleDraw();
+},{once:true});
+const groupEntries=Object.entries(groups);
+function option(value,label){const o=document.createElement('option');o.value=value;o.textContent=label;return o;}
+for(const [id,label] of groupEntries){
+  const b=document.createElement('button');b.type='button';b.textContent=label;b.dataset.group=id;
+  role('systems').append(b);role('system-select').append(option(id,label));
+  role('index-group').append(option(id,id==='all'?'All systems':label));
+}
+role('coverage').textContent=terms.size+' terms  /  '+(groupEntries.length-1)+' building systems';
+function getScenePieces(g,s){
+  return pieces.filter(o=>o.scene===s&&(g==='all'||s!=='house'||terms.get(o.id).group===g));
+}
+function centerCandidate(id){
+  const candidates=localParts.filter(o=>o.id===id);
+  const target=view==='house'?[1.8,3.4,2.7]:bounds?.center||[0,0,0];
+  return candidates.sort((a,b)=>candidateScore(a,target)-candidateScore(b,target))[0];
+}
+function candidateScore(o,target){
+  return Math.hypot(...sub(o.center,target))-.09*Math.max(...getBounds([o]).spans);
+}
+function connectedPart(start){
+  const others=localParts.filter(o=>o.id===start.id),boxes=others.map(o=>getBounds([o]));
+  const found=new Set([start]),queue=[others.indexOf(start)];
+  while(queue.length){
+    const i=queue.pop(),a=boxes[i];
+    for(let j=0;j<others.length;j++){
+      if(found.has(others[j]))continue;
+      const b=boxes[j];
+      if(a.lo.every((v,k)=>v<=b.hi[k]+.018&&a.hi[k]>=b.lo[k]-.018)){found.add(others[j]);queue.push(j);}
+    }
+  }
+  return [...found];
+}
+function configureScene(g,s,id,instance=null){
+  group=g;view=s;isolated=false;selectedPoint=null;
+  localParts=getScenePieces(g,s);bounds=getBounds(localParts);
+  const ids=new Set(localParts.map(o=>o.id));
+  viewTerms=[...terms.values()].filter(t=>ids.has(t.id));
+  const fallback=[id,detailPreferred[s],preferred[g],viewTerms[0].id].find(x=>ids.has(x));
+  active=instance||centerCandidate(fallback);chooseBest=true;
+  updateVisible();setControls();updateDescription();
+}
+function updateVisible(){
+  visible=isolated?connectedPart(active):localParts;
+  bounds=getBounds(visible);renderer.set(visible,bounds);resetCamera();
+}
+function resetCamera(){
+  [yaw,pitch]=defaults[view]||defaults.house;
+  if(view==='house'&&['floor','foundation'].includes(group))pitch=.48;
+  if(group==='walls'&&view==='house')yaw=.49;
+  if(isolated&&Math.max(...bounds.spans)<1)pitch=.37;
+  zoom=1;pan=[0,0];measureFit();scheduleDraw();
+}
+function measureFit(){
+  const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;
+  const perspective=getCamera(yaw,pitch);
+  const x=[],y=[];
+  for(const o of visible)for(const v of o.verts){x.push(dot(v,perspective.right));y.push(dot(v,perspective.up));}
+  const lx=Math.min(...x),hx=Math.max(...x),ly=Math.min(...y),hy=Math.max(...y);
+  const base=bounds.center;
+  focus=add(add(base,mul(perspective.right,(lx+hx)*.5-dot(base,perspective.right))),mul(perspective.up,(ly+hy)*.5-dot(base,perspective.up)));
+  fitScale=Math.min(w*(w<440?.91:.89)/Math.max(hx-lx,.06),h*.83/Math.max(hy-ly,.06));
+}
+function setControls(){
+  for(const b of role('systems').querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.group===group));
+  role('system-select').value=group;
+  const scenes=groupScenes[group];role('scene').replaceChildren(...scenes.map(s=>option(s,sceneNames[s])));
+  role('scene').value=view;role('model-options').hidden=scenes.length<2;
+  role('model-title').textContent=isolated?'Isolated part':view==='house'&&group!=='all'?groups[group]:sceneNames[view];
+  role('scene-count').textContent=viewTerms.length+' terms in this view';
+}
+function updateDescription(){
+  const t=terms.get(active.id);
+  for(const k of ['name','purpose','placement','importance'])role(k).textContent=t[k];
+  role('part-group').textContent=groups[t.group];role('isolate-text').textContent=isolated?'Show assembly':'Isolate this part';
+  root.querySelector('[data-action="isolate"]').setAttribute('aria-pressed',String(isolated));
+  role('position').textContent='Term '+(1+viewTerms.findIndex(x=>x.id===t.id))+' of '+viewTerms.length;
+  canvas.setAttribute('aria-label',sceneNames[view]+'. Selected piece: '+t.name+'. Select pieces by tapping the model or choosing a term in the index.');
+}
+function scheduleDraw(){if(!drawPending){drawPending=true;requestAnimationFrame(draw);}}
+function draw(){
+  drawPending=false;const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h||!focus)return;
+  cam={...getCamera(yaw,pitch),w,h,scale:fitScale*zoom,center:focus,pan};
+  const bg=embedded?themeColor():rgb('#e9efea');
+  renderer.draw(cam,active.num,bg);
+  if(chooseBest&&!isolated){
+    chooseBest=false;
+    const candidates=localParts.filter(o=>o.id===active.id);
+    const target=active.center;
+    candidates.sort((a,b)=>candidateScore(a,target)-candidateScore(b,target));
+    outer:for(const ob of candidates.slice(0,32)){
+      const samples=[ob.center,...ob.faces.filter(f=>dot(f.n,cam.forward)>.01).map(f=>average(f.pts))];
+      for(const point of samples){
+        const [x,y]=project(point,cam);
+        if(x>=0&&x<w&&y>=0&&y<h&&renderer.pick(x,y)===ob.num){
+          const changed=active!==ob;active=ob;selectedPoint=point;
+          if(changed)renderer.draw(cam,active.num,bg);break outer;
+        }
+      }
+    }
+  }
+  annotation();
+}
+const themeSample=document.createElement('canvas');
+themeSample.width=1;themeSample.height=1;
+const sampleContext=themeSample.getContext('2d',{willReadFrequently:true});
+let cachedCss='',cachedBg=rgb('#e9efea');
+function themeColor(){
+  const css=getComputedStyle(stage).backgroundColor;
+  if(css!==cachedCss){
+    cachedCss=css;sampleContext.clearRect(0,0,1,1);sampleContext.fillStyle=css;
+    sampleContext.fillRect(0,0,1,1);
+    const rgba=sampleContext.getImageData(0,0,1,1).data;
+    cachedBg=rgba[3]?Array.from(rgba.slice(0,3),c=>c/255):rgb('#e9efea');
+  }
+  return cachedBg;
+}
+function annotation(){
+  const {w,h}=cam,dpr=Math.min(devicePixelRatio||1,2);
+  if(overlay.width!==Math.round(w*dpr)||overlay.height!==Math.round(h*dpr)){overlay.width=Math.round(w*dpr);overlay.height=Math.round(h*dpr);}
+  const ctx=overlayContext;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+  const point=selectedPoint||active.center;
+  const [x,y]=project(point,cam);
+  if(x<4||x>w-4||y<4||y>h-4)return;
+  const visibleHere=isTurning||renderer.pick(x,y)===active.num;
+  // A dashed leader locates a buried part even when another layer covers it.
+  const label=terms.get(active.id).name;
+  ctx.font='600 '+(w<460?11:12)+'px "Segoe UI",Arial,sans-serif';
+  const tw=ctx.measureText(label).width+22,th=25;
+  const preferRight=x<w*.47;
+  const tx=clamp(x+(preferRight?31:-tw-30),6,w-tw-6);
+  const ty=clamp(y-(w<460?34:50)-th,6,h-th-6);
+  const anchor=clamp(x,tx+8,tx+tw-8),endY=ty+th;
+  ctx.strokeStyle='#9a512d';ctx.lineWidth=1.3;ctx.setLineDash(visibleHere?[]:[3,3]);
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(anchor,endY);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle='#ff8a45';ctx.strokeStyle='#fff4e4';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,3.7,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.fillStyle='#243d36';ctx.beginPath();if(ctx.roundRect)ctx.roundRect(tx,ty,tw,th,5);else ctx.rect(tx,ty,tw,th);ctx.fill();
+  ctx.fillStyle='#ffffff';ctx.textBaseline='middle';ctx.fillText(label,tx+11,ty+th/2+.3);
+}
+function selectLocal(id,instance,point){
+  if(isolated){isolated=false;active=instance||centerCandidate(id);updateVisible();setControls();}
+  else active=instance||centerCandidate(id);
+  selectedPoint=point||null;chooseBest=!instance;updateDescription();scheduleDraw();saveState();
+}
+function selectFromLibrary(id){
+  const term=terms.get(id);
+  if(viewTerms.some(t=>t.id===id)){selectLocal(id);return;}
+  const ordered=groupScenes[term.group];
+  const s=ordered.find(s=>term.scenes.has(s))||[...term.scenes][0];
+  configureScene(term.group,s,id);saveState();
+}
+function changeGroup(g){
+  const s=groupScenes[g][0];configureScene(g,s,preferred[g]);saveState();
+}
+function surfacePoint(instance,x,y){
+  let best=-Infinity,result=instance.center;
+  for(const f of instance.faces){
+    const pts=f.pts.map(p=>project(p,cam));
+    for(let i=1;i<pts.length-1;i++){
+      const a=pts[0],b=pts[i],c=pts[i+1],abx=b[0]-a[0],aby=b[1]-a[1],acx=c[0]-a[0],acy=c[1]-a[1];
+      const det=abx*acy-aby*acx;if(Math.abs(det)<.00001)continue;
+      const u=((x-a[0])*acy-(y-a[1])*acx)/det,v=(abx*(y-a[1])-aby*(x-a[0]))/det;
+      if(u<-.002||v<-.002||u+v>1.002)continue;
+      const depth=a[2]+u*(b[2]-a[2])+v*(c[2]-a[2]);
+      if(depth>best){best=depth;result=add(add(mul(f.pts[0],1-u-v),mul(f.pts[i],u)),mul(f.pts[i+1],v));}
+    }
+  }
+  return result;
+}
+function tap(x,y){
+  if(!cam)return;
+  let n=renderer.pick(x,y);
+  if(!n&&matchMedia('(pointer: coarse)').matches){
+    for(const [dx,dy] of [[2,0],[-2,0],[0,2],[0,-2],[4,0],[-4,0],[0,4],[0,-4]]){
+      n=renderer.pick(x+dx,y+dy);if(n){x+=dx;y+=dy;break;}
+    }
+  }
+  if(!n)return;
+  const ob=pieces[n-1];if(isolated){active=ob;selectedPoint=surfacePoint(ob,x,y);scheduleDraw();return;}
+  selectLocal(ob.id,ob,surfacePoint(ob,x,y));
+}
+const contacts=new Map();let dragged=false,pair=null;
+const mid=(a,b)=>[(a.x+b.x)*.5,(a.y+b.y)*.5];
+function twoFingers(){const [a,b]=[...contacts.values()];return {dist:Math.max(2,Math.hypot(a.x-b.x,a.y-b.y)),mid:mid(a,b)};}
+stage.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0&&e.button!==1)return;
+  stage.setPointerCapture(e.pointerId);
+  if(!contacts.size)dragged=false;
+  contacts.set(e.pointerId,{x:e.clientX,y:e.clientY,sx:e.clientX,sy:e.clientY});
+  if(contacts.size===2){pair=twoFingers();dragged=true;}
+});
+stage.addEventListener('pointermove',e=>{
+  const a=contacts.get(e.pointerId);if(!a)return;
+  const dx=e.clientX-a.x,dy=e.clientY-a.y;
+  if(!dragged&&Math.hypot(e.clientX-a.sx,e.clientY-a.sy)<4)return;
+  dragged=true;isTurning=true;a.x=e.clientX;a.y=e.clientY;
+  if(contacts.size>=2){
+    const next=twoFingers();
+    if(pair){zoom=clamp(zoom*next.dist/pair.dist,.42,8);pan=add(pan,sub(next.mid,pair.mid));}
+    pair=next;
+  }else if(e.shiftKey||e.buttons===4){pan=add(pan,[dx,dy]);}
+  else{yaw-=dx*.009;pitch=clamp(pitch+dy*.008,-.12,1.39);}
+  scheduleDraw();
+});
+function endContact(e,canTap){
+  if(!contacts.has(e.pointerId))return;
+  if(canTap&&!dragged&&contacts.size===1){
+    const rect=canvas.getBoundingClientRect();tap(e.clientX-rect.left,e.clientY-rect.top);
+  }
+  contacts.delete(e.pointerId);if(contacts.size<2)pair=null;
+  if(!contacts.size&&dragged){isTurning=false;scheduleDraw();saveState();}
+}
+stage.addEventListener('pointerup',e=>endContact(e,true));
+stage.addEventListener('pointercancel',e=>endContact(e,false));
+stage.addEventListener('lostpointercapture',e=>endContact(e,false));
+stage.addEventListener('wheel',e=>{
+  e.preventDefault();zoom=clamp(zoom*Math.exp(-clamp(e.deltaY,-140,140)*.0025),.42,8);scheduleDraw();saveState();
+},{passive:false});
+function searchIndex(){
+  const fold=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+  const words=fold(role('search').value).split(' ').filter(Boolean),filter=role('index-group').value;
+  const matches=[...terms.values()].filter(t=>(filter==='all'||filter===t.group)&&words.every(w=>fold(t.name+' '+t.aliases+' '+groups[t.group]).includes(w)));
+  matches.sort((a,b)=>a.name.localeCompare(b.name));
+  role('result-count').textContent=matches.length+' '+(matches.length===1?'term':'terms');
+  const container=role('results');container.replaceChildren();
+  if(!matches.length){const n=document.createElement('p');n.className='empty';n.textContent='No matches. Try a shorter term or choose All systems.';container.append(n);return;}
+  for(const [g,label] of groupEntries){
+    const list=matches.filter(t=>t.group===g);if(!list.length)continue;
+    const heading=document.createElement('h3');heading.textContent=label;
+    const wrap=document.createElement('div');wrap.className='result-group';
+    for(const t of list){const b=document.createElement('button');b.type='button';b.className='result btn';b.dataset.term=t.id;b.textContent=t.name;wrap.append(b);}
+    container.append(heading,wrap);
+  }
+}
+role('search').addEventListener('input',searchIndex);role('index-group').addEventListener('change',searchIndex);
+role('system-select').addEventListener('change',e=>changeGroup(e.target.value));
+role('scene').addEventListener('change',e=>{const s=e.target.value;configureScene(group,s,detailPreferred[s]||preferred[group]);saveState();});
+function showDialog(dialog){
+  if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
+}
+function closeDialog(dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');}
+for(const d of root.querySelectorAll('dialog'))d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDialog(d);}});
+root.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.group){changeGroup(b.dataset.group);return;}
+  if(b.dataset.term){closeDialog(role('library'));selectFromLibrary(b.dataset.term);return;}
+  switch(b.dataset.action){
+    case 'index':role('search').value='';role('index-group').value='all';searchIndex();showDialog(role('library'));if(!matchMedia('(pointer: coarse)').matches)role('search').focus();return;
+    case 'guide':showDialog(role('guide'));return;
+    case 'close-guide':closeDialog(role('guide'));return;
+    case 'close-index':closeDialog(role('library'));return;
+    case 'left':yaw-=Math.PI/9;break;
+    case 'right':yaw+=Math.PI/9;break;
+    case 'plus':zoom=clamp(zoom*1.25,.42,8);break;
+    case 'minus':zoom=clamp(zoom/1.25,.42,8);break;
+    case 'fit':resetCamera();break;
+    case 'prev':case 'next':{
+      const idx=viewTerms.findIndex(t=>t.id===active.id),step=b.dataset.action==='next'?1:-1;
+      selectLocal(viewTerms[(idx+step+viewTerms.length)%viewTerms.length].id);return;
+    }
+    case 'isolate':isolated=!isolated;selectedPoint=null;chooseBest=false;updateVisible();setControls();updateDescription();break;
+    default:return;
+  }
+  scheduleDraw();saveState();
+});
+function saveState(){
+  if(!embedded||!window.openai?.setWidgetState)return;
+  const snapshot={modelContent:{selected:terms.get(active.id).name,system:groups[group]},privateContent:{group,view,id:active.id,isolated,yaw,pitch,zoom}};
+  Promise.resolve(window.openai.setWidgetState(snapshot)).catch(()=>{});
+}
+function restore(s){
+  const p=s?.privateContent;
+  if(!p||!groupScenes[p.group]?.includes(p.view)||!getScenePieces(p.group,p.view).some(o=>o.id===p.id))return;
+  configureScene(p.group,p.view,p.id);
+  if(p.isolated){isolated=true;updateVisible();setControls();updateDescription();}
+  if(Number.isFinite(p.yaw)&&Number.isFinite(p.pitch)&&Number.isFinite(p.zoom)){
+    yaw=p.yaw;pitch=clamp(p.pitch,-.12,1.39);zoom=clamp(p.zoom,.42,8);scheduleDraw();
+  }
+}
+configureScene('all','house','common-rafter');
+if(embedded){restore(window.openai?.widgetState);window.addEventListener('openai:set_globals',e=>restore(e.detail?.globals?.widgetState));}
+new ResizeObserver(()=>{measureFit();scheduleDraw();}).observe(stage);
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',scheduleDraw);
+
+})();
+</script></body></html>
