@@ -1,0 +1,83 @@
+<div id="framing-atlas">
+  <header class="mast">
+    <div class="mast-inner">
+      <div class="brand"><span class="brand-icon" aria-hidden="true" data-icon="brand"></span>Done Right Roofing</div>
+      <div class="top-actions">
+        <button type="button" class="minor btn" data-action="guide"><span data-icon="help"></span><span>Guide</span></button>
+        <button type="button" class="index-button btn" data-action="index"><span data-icon="book"></span>Term index</button>
+      </div>
+    </div>
+  </header>
+  <main class="page-inner">
+    <div class="intro">
+      <div><h1>House Framing Atlas</h1><p>Rotate the cutaway and select a piece to learn how the house fits together.</p></div>
+      <div class="coverage" data-role="coverage"></div>
+    </div>
+    <nav class="systems" data-role="systems" aria-label="Building systems"></nav>
+    <label class="small-systems form-label">Building system<select class="form-select" data-role="system-select" aria-label="Building system"></select></label>
+    <div class="workspace">
+      <section class="model-panel" aria-label="Interactive house model">
+        <div class="model-bar">
+          <div class="scene-caption"><span data-icon="cube"></span><span data-role="model-title">House cutaway</span></div>
+          <label class="model-options form-label" data-role="model-options">Detail view <select class="form-select" data-role="scene" aria-label="Detail view"></select></label>
+        </div>
+        <div class="stage" data-role="stage">
+          <canvas class="model-canvas" data-role="model" role="img" aria-label="Rotatable 3D house cutaway. Select a visible piece, or choose a term in the index."></canvas>
+          <canvas class="overlay" data-role="overlay" aria-hidden="true"></canvas>
+        </div>
+        <div class="controls">
+          <div class="gesture"><span data-icon="orbit"></span><span>Drag to rotate <span class="control-divider">/</span> Click to inspect</span></div>
+          <div class="tool-group" aria-label="Camera controls">
+            <button type="button" class="btn icon-button" data-action="left" aria-label="Rotate left" title="Rotate left"><span data-icon="left-orbit"></span></button>
+            <button type="button" class="btn icon-button" data-action="right" aria-label="Rotate right" title="Rotate right"><span data-icon="right-orbit"></span></button>
+            <span class="rule"></span>
+            <button type="button" class="btn icon-button" data-action="minus" aria-label="Zoom out" title="Zoom out"><span data-icon="minus"></span></button>
+            <button type="button" class="btn icon-button" data-action="plus" aria-label="Zoom in" title="Zoom in"><span data-icon="plus"></span></button>
+            <button type="button" class="btn icon-button" data-action="fit" aria-label="Reset view" title="Reset view"><span data-icon="fit"></span></button>
+          </div>
+        </div>
+      </section>
+      <aside class="inspector" aria-label="Selected part">
+        <div class="inspector-body" aria-live="polite" aria-atomic="true">
+          <div class="part-group"><span class="group-marker"></span><span data-role="part-group"></span></div>
+          <h2 data-role="name"></h2>
+          <dl class="explanation">
+            <dt>Purpose</dt><dd data-role="purpose"></dd>
+            <dt>Placement</dt><dd data-role="placement"></dd>
+            <dt>Why it matters</dt><dd data-role="importance"></dd>
+          </dl>
+        </div>
+        <div class="inspector-actions">
+          <button type="button" class="btn isolate" data-action="isolate" aria-pressed="false"><span data-icon="focus"></span><span data-role="isolate-text">Isolate this part</span></button>
+          <div class="browse"><button type="button" class="btn icon-button" data-action="prev" aria-label="Previous term" title="Previous term"><span data-icon="arrow-left"></span></button><div data-role="position"></div><button type="button" class="btn icon-button" data-action="next" aria-label="Next term" title="Next term"><span data-icon="arrow-right"></span></button></div>
+        </div>
+      </aside>
+    </div>
+    <div class="legend"><span class="legend-dot"></span>Selected piece<span class="legend-spacer"></span><span data-role="scene-count"></span></div>
+  </main>
+  <dialog class="atlas-dialog" data-role="library" aria-labelledby="atlas-index-title">
+    <div class="dialog-head"><div><h2 id="atlas-index-title">Term index</h2><p>Choose a term to locate it in the model.</p></div><button type="button" class="btn icon-button" data-action="close-index" aria-label="Close term index"><span data-icon="close"></span></button></div>
+    <div class="search-fields"><label class="search-box form-label"><span data-icon="search"></span><input class="form-control" type="search" data-role="search" aria-label="Search terms" placeholder="Search terms or trade names" autocomplete="off"></label>
+    <select class="form-select" data-role="index-group" aria-label="Filter index by building system"></select></div>
+    <div class="results-count" data-role="result-count" aria-live="polite"></div>
+    <div class="results" data-role="results"></div>
+  </dialog>
+  <dialog class="atlas-dialog guide-dialog" data-role="guide" aria-labelledby="atlas-guide-title">
+    <div class="dialog-head"><h2 id="atlas-guide-title">Using the atlas</h2><button type="button" class="btn icon-button" data-action="close-guide" aria-label="Close guide"><span data-icon="close"></span></button></div>
+    <ol class="guide-list">
+      <li><strong>Choose a building system.</strong> Start with the whole house, or select a system to uncover its parts. Use Detail view to switch between assemblies.</li>
+      <li><strong>Turn the model.</strong> Drag with a mouse or one finger. Scroll or pinch to zoom. The arrow and zoom buttons also work with a keyboard.</li>
+      <li><strong>Select a piece.</strong> Click or tap its surface to read about it. The term index finds small or hidden pieces by name.</li>
+      <li><strong>Look more closely.</strong> Isolate this part shows the selected term on its own. Show assembly puts it back in context.</li>
+    </ol>
+    <p class="scope-note">The atlas illustrates common North American wood-frame construction. Cutaways omit sections to expose connections. Dimensions and spacing are illustrative.</p>
+    <h3>Field references</h3>
+    <div class="sources">
+      <a href="https://awc.org/resources/wcd-1-details-for-conventional-wood-frame-construction/" target="_blank" rel="noopener">American Wood Council · Conventional wood framing</a>
+      <a href="https://www.owenscorning.com/en-us/roofing/components/" target="_blank" rel="noopener">Owens Corning · Roof components</a>
+      <a href="https://www.sbcacomponents.com/terminology" target="_blank" rel="noopener">Structural Building Components Association · Truss terminology</a>
+      <a href="https://basc.pnnl.gov/resource-guides/windows-and-doors-are-fully-flashed" target="_blank" rel="noopener">Building America Solution Center · Window and door flashing</a>
+      <a href="https://basc.pnnl.gov/resource-guides/air-sealing-sill-plates" target="_blank" rel="noopener">Building America Solution Center · Sill plates</a>
+    </div>
+  </dialog>
+</div>
